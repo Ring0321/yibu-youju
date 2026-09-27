@@ -4,6 +4,8 @@
 
 > 当前发布的是研究机制、工程基线与详细开发计划，不是已完成的售后产品。真实模型、完整业务闭环和实机验证尚未验收；本仓库不是 Anker 官方项目，也不代表品牌背书。
 
+[自动测试与发布检查](https://github.com/Ring0321/yibu-youju/actions/workflows/research.yml) | [开源发布清单](docs/publication-checklist.md)
+
 ## 核心问题
 
 操作完成不等于问题解决。照片变干净不能直接证明功能恢复，操作前的观察也不一定仍能支持操作后的结论。
