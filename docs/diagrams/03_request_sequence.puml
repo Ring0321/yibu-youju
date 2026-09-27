@@ -1,0 +1,44 @@
+@startuml
+skinparam dpi 180
+skinparam defaultFontName Microsoft YaHei
+skinparam defaultFontSize 16
+skinparam ArrowFontSize 14
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam sequenceMessageAlign center
+skinparam sequenceParticipantBackgroundColor #F0F5FA
+skinparam sequenceParticipantBorderColor #4D6F91
+skinparam sequenceLifeLineBorderColor #A9B4BF
+skinparam sequenceGroupBackgroundColor #F7F8FA
+skinparam maxMessageSize 155
+hide footbox
+autonumber
+actor 用户 as U
+participant "业务入口\n与提交门禁" as API
+participant "后台服务任务" as W
+participant "模型服务" as M
+database "业务数据库" as DB
+
+U -> API : 图文输入或操作反馈
+API -> DB : 鉴权后保存输入、版本和待投递意图
+API --> U : 输入已接收及运行编号
+W -> DB : 领取运行并读取当前状态
+W -> M : 裁剪后的授权上下文
+M --> W : 带来源的候选与提案
+W -> W : 运行独立验效内核\n核对反例与必要复测
+W -> API : 提案、依据、输入版本及执行代次
+API -> DB : 短事务复查版本、权限与接管状态
+alt 当前提交仍然有效
+  API -> DB : 幂等保存决策、事件与下一步
+  DB --> API : 真实事件编号和新版本
+  API --> U : 显示实际保存的下一步或结果
+else 版本改变或已人工接管
+  API --> W : 拒绝旧提案，不覆盖新状态
+  W -> DB : 记录失效原因
+end
+W -> DB : 保存运行位置与剩余预算
+note over W,DB
+业务已提交而检查点落后时，恢复读取既有结果。
+等待用户是正常状态，不持续占用活动任务。
+end note
+@enduml

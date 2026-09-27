@@ -1,0 +1,34 @@
+@startuml
+!pragma layout smetana
+top to bottom direction
+skinparam dpi 180
+skinparam defaultFontName Microsoft YaHei
+skinparam defaultFontSize 17
+skinparam ArrowFontSize 14
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam ArrowColor #4D6F91
+skinparam rectangleBackgroundColor #F0F5FA
+skinparam rectangleBorderColor #4D6F91
+skinparam nodesep 38
+skinparam ranksep 38
+
+rectangle "确认产品与服务包\n读取当前会话" as Start
+rectangle "按动作影响重审证据\n保留仍适用的信息" as Review
+rectangle "核验目标结论\n相容反例 + 范围 + 必要规程" as Verify #FFF6E6
+rectangle "保存限定结论与依据\n不扩大为所有功能正常" as Supported #EAF5F0
+rectangle "选择下一项获准检查\n必测优先，再比较区分能力与负担" as Select
+rectangle "保留待验证或未解决\n停止自动规划，提供人工入口" as Pending #FFF6E6
+rectangle "发布一个步骤或复测请求\n保存等待状态，释放任务" as Wait
+rectangle "接收新的执行反馈或观察\n区分完成、部分执行与未知" as Feedback
+
+Start -down-> Review
+Review -down-> Verify
+Verify -right-> Supported : 条件全部满足
+Verify -down-> Select : 仍有验证缺口
+Select -right-> Pending : 无安全可行步骤\n或范围、预算不允许
+Select -down-> Wait : 有可行下一步
+Wait -down-> Feedback : 用户反馈到达
+Feedback -left-> Review : 新证据触发重审
+Supported -[hidden]down-> Pending
+@enduml

@@ -1,0 +1,45 @@
+@startuml
+!pragma layout smetana
+skinparam dpi 180
+skinparam defaultFontName Microsoft YaHei
+skinparam defaultFontSize 17
+skinparam ArrowFontSize 14
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam stateBackgroundColor #F0F5FA
+skinparam stateBorderColor #4D6F91
+skinparam ArrowColor #536477
+skinparam ranksep 35
+skinparam nodesep 32
+top to bottom direction
+
+state "受理求助" as Intake
+state "等待产品确认" as Product
+state "分析与选择下一步" as Triage
+state "等待用户操作" as Action
+state "等待必要复测" as Verify
+state "等待人工接单" as Queue
+state "人工处理中" as Human
+state "会话关闭" as Closed
+
+[*] --> Intake
+Intake --> Product : 产品不明确
+Product --> Triage : 用户确认
+Intake --> Triage : 产品已明确
+Triage --> Action : 发布审核步骤
+Action --> Triage : 新操作反馈
+Triage --> Verify : 仍缺验证条件
+Verify --> Triage : 新观察或复测反馈
+Triage --> Queue : 用户确认交接
+Queue --> Human : 真人实际接单
+Human --> Triage : 明确归还自动流程
+Triage --> Closed : 记录结果与关闭原因
+Human --> Closed : 记录处理结果
+Closed --> Intake : 有权限地重新打开
+
+note bottom of Closed
+会话关闭不等于修复成功。
+结果等级另存：用户自述、局部观察、
+限定规程支持、待验证或未解决。
+end note
+@enduml

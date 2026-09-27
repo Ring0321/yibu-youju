@@ -1,0 +1,57 @@
+@startuml
+!pragma layout smetana
+skinparam dpi 180
+skinparam defaultFontName Microsoft YaHei
+skinparam defaultFontSize 17
+skinparam ArrowFontSize 13
+skinparam shadowing false
+skinparam roundcorner 6
+skinparam backgroundColor white
+skinparam componentStyle rectangle
+skinparam ArrowColor #536477
+skinparam packageBorderColor #CCD5DF
+skinparam packageBackgroundColor #FFFFFF
+skinparam componentBorderColor #4D6F91
+skinparam componentBackgroundColor #F0F5FA
+skinparam databaseBackgroundColor #EDF7F3
+skinparam databaseBorderColor #408170
+skinparam nodesep 28
+skinparam ranksep 35
+top to bottom direction
+
+rectangle "用户服务端\n提交图文与操作反馈" as User #F7F8FA
+rectangle "人工客服端\n接单、补问、续聊" as Human #F7F8FA
+rectangle "知识审核端\n来源核对与版本发布" as Admin #F7F8FA
+User -[hidden]right-> Human
+Human -[hidden]right-> Admin
+
+component "业务入口\n身份权限 · 会话归属 · 输入事件" as Api
+component "有状态服务编排\n读取当前版本 · 等待与恢复 · 预算控制" as Flow
+component "服务智能体\n图文理解 · 只读检索 · 单步提案" as Agent
+component "独立验效内核\n证据重审 · 反例搜索 · 复测条件" as Verify #FFF6E6
+component "提交门禁与事务服务\n来源与权限校验 · 版本复查 · 幂等提交" as Commit
+database "业务事实库\n会话 · 证据 · 事件 · 工单" as DB
+database "审核知识与产品服务包\n适用资料 · 动作边界 · 验证规程" as Pack
+database "运行与恢复记录\n任务 · 检查点 · 调用预算" as Run
+
+User --> Api
+Human --> Api
+Admin --> Pack : 审核后发布
+Api --> Flow
+Flow --> Agent : 构造受限上下文
+Flow --> Verify : 当前证据与规则
+Agent --> Pack : 只读检索
+Verify --> Pack : 固定规则版本
+Agent --> Commit : 候选提案
+Verify --> Commit : 允许结论与阻断项
+Commit --> DB : 获准后写入
+Flow --> Run : 保存执行位置
+Api --> DB : 持久化输入与读取进展
+DB -[hidden]right-> Pack
+Pack -[hidden]right-> Run
+
+legend bottom
+模型不直接写业务结论；业务事实以数据库为准。
+本图为目标架构，不表示所有模块已经集成验收。
+endlegend
+@enduml

@@ -1,0 +1,27 @@
+{
+    "kind":  "source_and_local_configuration_audit_not_product_acceptance",
+    "recorded_at":  "2026-09-22T07:29:49.0696254Z",
+    "template":  {
+                     "branch":  "work/yibu-youju-baseline",
+                     "license_path":  "LICENSE",
+                     "commit":  "cb740b656d7a0a6c5e12c7bf8e50343ec94ee9c7",
+                     "license":  "MIT",
+                     "repository":  "https://github.com/fastapi/full-stack-fastapi-template.git"
+                 },
+    "upstream_hashes_sha256":  {
+                                   "LICENSE":  "702c40d778386ffa2e793841c3069284968033b215a206d73adb3f4d1c135eb1",
+                                   "uv.lock":  "774a067f544cd53f91c43e70e92beac9ac667c8a38a255f26bfa21e2a1dc5445",
+                                   "bun.lock":  "b15593f0e6d6f880f930ee176f0b8437da9c0414f9862b1af06c6d3f02e06fe1",
+                                   "backend/pyproject.toml":  "af02a0595faf8ff29dbfc0897a4e0e24f4c7736d0fe92eb5332bbd1a675a4439",
+                                   "frontend/package.json":  "ff15d7b56bc15beef9b13c8cfce6394bba97ae40b438b36c8b461f16bad01fa4"
+                               },
+    "modifications":  [
+                          "Isolated G0 Compose",
+                          "Validation Dockerfile and scripts",
+                          "Local secret exclusions",
+                          "Model selection documentation"
+                      ],
+    "competition_reuse_rules_confirmed":  false,
+    "live_model_tested":  false,
+    "other_planned_components_installed":  false
+}

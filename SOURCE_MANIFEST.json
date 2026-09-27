@@ -1,0 +1,1614 @@
+{
+  "kind": "curated_source_export_not_product_acceptance",
+  "created_at": "2026-09-27T17:11:05.8991841Z",
+  "upstream_repository": "https://github.com/fastapi/full-stack-fastapi-template",
+  "upstream_commit": "cb740b656d7a0a6c5e12c7bf8e50343ec94ee9c7",
+  "omitted": [
+    "Git history",
+    "local credentials",
+    "raw execution logs",
+    "database volumes",
+    "user uploads",
+    "upstream deployment workflows",
+    "Office documents and metadata",
+    "bundled tool binaries"
+  ],
+  "transformations": [
+    "Repository-relative document links",
+    "Missing private evidence labeled explicitly",
+    "Machine workspace prefix removed",
+    "G0 runner calls Docker without a local wrapper",
+    "UTF-8 text line endings normalized to LF for cross-platform Git checkouts"
+  ],
+  "files": [
+    {
+      "source": "yibu-youju/.dockerignore",
+      "destination": "baseline/.dockerignore",
+      "source_sha256": "a58c1676e1ec85c521e01b66cd01e13fcf074135a3fc492bf9e43ba5bcb48f12",
+      "normalized_for_publication": true,
+      "published_sha256": "9d1f74cd3ad3deb1269d5fb1339e3ab21fa28c1631b273528577b75cbd198634"
+    },
+    {
+      "source": "yibu-youju/.gitattributes",
+      "destination": "baseline/.gitattributes",
+      "source_sha256": "0a38370224c134075aa5a1850ef9af90d4f090e2917661983e5f42d1deb12639",
+      "normalized_for_publication": true,
+      "published_sha256": "13cb7f5e12dd469dc5c88afcf0cd035abe6cd1fc2f30afe224991e66b4262222"
+    },
+    {
+      "source": "yibu-youju/.python-version",
+      "destination": "baseline/.python-version",
+      "source_sha256": "73880611a18bf211ab229c2a2d93ec11a622693e79532c0b797b91fd056704dc",
+      "normalized_for_publication": true,
+      "published_sha256": "a876e0b10411037a012498b9fe18d9bc1df32ed8b722a13564dc944ddcfd9135"
+    },
+    {
+      "source": "yibu-youju/LICENSE",
+      "destination": "baseline/LICENSE",
+      "source_sha256": "702c40d778386ffa2e793841c3069284968033b215a206d73adb3f4d1c135eb1",
+      "normalized_for_publication": true,
+      "published_sha256": "0bd4e76cdd06ab24cce2de5e74f490920897f90a22ad35e8403ed006d4560f48"
+    },
+    {
+      "source": "yibu-youju/backend/.dockerignore",
+      "destination": "baseline/backend/.dockerignore",
+      "source_sha256": "9b51dd34f7d52ec9d7dcd31dc548a4906e0d89f66ab6ecc68d0733c1ea118455",
+      "normalized_for_publication": true,
+      "published_sha256": "808a727e987db620e84e92cd768a1cbf8116168c5e0bc69c96992193f93d6825"
+    },
+    {
+      "source": "yibu-youju/backend/.gitignore",
+      "destination": "baseline/backend/.gitignore",
+      "source_sha256": "d8e7c1ca2eeeb3c392bf466c9ccff62c1a599b09c16e9c3ba1c98c670242d0b6",
+      "normalized_for_publication": true,
+      "published_sha256": "a110cf459f8dc07a62b2b3424c3531a3e044be5a78b49e3b118d3bd460b1f881"
+    },
+    {
+      "source": "yibu-youju/backend/Dockerfile",
+      "destination": "baseline/backend/Dockerfile",
+      "source_sha256": "be405f4c6186373db0005aa4af35b82d3c2beb7fdfcf3f9f3ee7826d432d1cd2",
+      "normalized_for_publication": true,
+      "published_sha256": "f6399822e16d9bfa11d2d1879db88741d60eef69c682f779e1b2aa101d76e7ef"
+    },
+    {
+      "source": "yibu-youju/backend/README.md",
+      "destination": "baseline/backend/README.md",
+      "source_sha256": "bee7576863994b855d33644e16f4b0f6fb3cde0e01dc69cf686d4c144df59cb5",
+      "normalized_for_publication": true,
+      "published_sha256": "e0812ad9a9804fd4f0270b8eefbf18da530391ede13a193e13fef0e134ed1cf1"
+    },
+    {
+      "source": "yibu-youju/backend/alembic.ini",
+      "destination": "baseline/backend/alembic.ini",
+      "source_sha256": "7c3d94cbfd98f2c9ba31f0b5ff290a0f9d12f20c7f2f7fa3f8d5fbfe5386288f",
+      "normalized_for_publication": true,
+      "published_sha256": "a3fe6c2cd06b6c5b66e13901c0e25c018372d75009359e56692d24a1b7c554a2"
+    },
+    {
+      "source": "yibu-youju/backend/app/__init__.py",
+      "destination": "baseline/backend/app/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/README",
+      "destination": "baseline/backend/app/alembic/README",
+      "source_sha256": "51b990c7e2cc2e649b1733029e81e20a60f768c4ee848e9cf3f97fbcfb37d51d",
+      "normalized_for_publication": true,
+      "published_sha256": "85e33379b63094686713cff80962782d2ef85a81198c1cbe4be988251c4010a2"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/env.py",
+      "destination": "baseline/backend/app/alembic/env.py",
+      "source_sha256": "25a78f343c479c65df6d6238511b4b74316a55192b91414f65eefc7aa413ac8a",
+      "normalized_for_publication": true,
+      "published_sha256": "5e65dea30d8b09742383af77fe10abe22dab87d92d36a8e46781fde08d64a265"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/script.py.mako",
+      "destination": "baseline/backend/app/alembic/script.py.mako",
+      "source_sha256": "b2b1df1ee5a34c6ca48ff3e5cab39b95d6753b277f59b1f93c622c57bf993237",
+      "normalized_for_publication": true,
+      "published_sha256": "51ff01ffa828ba73f3e95627be7188154de6a1d8942dd073d9b428903be6c31a"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/versions/.keep",
+      "destination": "baseline/backend/app/alembic/versions/.keep",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/versions/1a31ce608336_add_cascade_delete_relationships.py",
+      "destination": "baseline/backend/app/alembic/versions/1a31ce608336_add_cascade_delete_relationships.py",
+      "source_sha256": "21edcee58e77454faf02cffec4b8221a7f7d953225678b912a782dcd4ea1becf",
+      "normalized_for_publication": true,
+      "published_sha256": "56d9a949c1455e59dc9a4b09c469a4d35cd6063230ab1ac1059ba4b58f6804c1"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/versions/9c0a54914c78_add_max_length_for_string_varchar_.py",
+      "destination": "baseline/backend/app/alembic/versions/9c0a54914c78_add_max_length_for_string_varchar_.py",
+      "source_sha256": "699b916517fe49792dc19bfaaaf9dff63e2940deec7134ca62824f93a9e9a0a0",
+      "normalized_for_publication": true,
+      "published_sha256": "d9919ae828a0d1aa0fa68fd75bc75a90994a256b66a3a153918149d9578c0c1b"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/versions/d98dd8ec85a3_edit_replace_id_integers_in_all_models_.py",
+      "destination": "baseline/backend/app/alembic/versions/d98dd8ec85a3_edit_replace_id_integers_in_all_models_.py",
+      "source_sha256": "0e22ab3692364a60c1115a25d46396959d505edd5dbec594481e416f7f4ec3e5",
+      "normalized_for_publication": true,
+      "published_sha256": "d5c549df50ddda6c9877e637e146cd757095460ee6285a7db06bb66724f32730"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/versions/e2412789c190_initialize_models.py",
+      "destination": "baseline/backend/app/alembic/versions/e2412789c190_initialize_models.py",
+      "source_sha256": "74398c51bf71674431332ce7533f5eb61903d7b0e9870e2fe86b72df91fdf68a",
+      "normalized_for_publication": true,
+      "published_sha256": "a73fcd9ff8a143b0a75228b63b6589e0ecbfa14c27286d33d4adeffe99c40075"
+    },
+    {
+      "source": "yibu-youju/backend/app/alembic/versions/fe56fa70289e_add_created_at_to_user_and_item.py",
+      "destination": "baseline/backend/app/alembic/versions/fe56fa70289e_add_created_at_to_user_and_item.py",
+      "source_sha256": "6e7a6429c60c7403e51a877ef7b702b44de8b0d58adad2c6ee63d4d301ab218f",
+      "normalized_for_publication": true,
+      "published_sha256": "68dc46eb06c7a6fe9059930eadbdeb349f5b13c789bb1a11846b05eccea0c304"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/__init__.py",
+      "destination": "baseline/backend/app/api/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/deps.py",
+      "destination": "baseline/backend/app/api/deps.py",
+      "source_sha256": "3dd8f84589467ce49d467297f3078e72c9cadd8f3f029395eb13c38d0a1a2c62",
+      "normalized_for_publication": true,
+      "published_sha256": "84c30966b3b862c643009c14146d1924dec50be5b0efb9f56798e2fda5189daa"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/main.py",
+      "destination": "baseline/backend/app/api/main.py",
+      "source_sha256": "b6791873ea929e68ec38732c32c5d510458ed52bba6150c66578b2b30a9b224b",
+      "normalized_for_publication": true,
+      "published_sha256": "9e9d533bea7c8616a1d9dd3d7e7cdfefa36726fb221bb289fd102654b7e93b3f"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/routes/__init__.py",
+      "destination": "baseline/backend/app/api/routes/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/routes/items.py",
+      "destination": "baseline/backend/app/api/routes/items.py",
+      "source_sha256": "e710b3e160bff038f079d99afff92d1d3f85b461e6e87db78f918027bf56c2b1",
+      "normalized_for_publication": true,
+      "published_sha256": "7f0fa55d1f7b02188c4abd4f88aa6db92fe03de38258b765ed050ec72032b410"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/routes/login.py",
+      "destination": "baseline/backend/app/api/routes/login.py",
+      "source_sha256": "3bd3232ba76cd7abc1f78d4aaa78e1f250bb0e1590c79ed48b89a2b703afb34d",
+      "normalized_for_publication": true,
+      "published_sha256": "3c7f7c395b74cea54e505a16052679614b4fd92325d88b761385df8d952af642"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/routes/private.py",
+      "destination": "baseline/backend/app/api/routes/private.py",
+      "source_sha256": "98a65c511d6b1206a9475781de3b07d9a7b114ded53b03025d3d8723d4a509df",
+      "normalized_for_publication": true,
+      "published_sha256": "f5df74cc276f0d8d83337922fb8e05e69ecbc885d466d90d2e3de54ba5e4c8f4"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/routes/users.py",
+      "destination": "baseline/backend/app/api/routes/users.py",
+      "source_sha256": "b7de1ea3fd10ba5ac80f14ab37b6bcad0840f8bc60c53d5f237623be9feae97a",
+      "normalized_for_publication": true,
+      "published_sha256": "566f253330d75bdbf04f2fd59b380dd2c51041d931bd7af6b2064ee66ea96e6d"
+    },
+    {
+      "source": "yibu-youju/backend/app/api/routes/utils.py",
+      "destination": "baseline/backend/app/api/routes/utils.py",
+      "source_sha256": "a7cbdfc35873a5347ca55c313b97248f6fc8f13e86eea8dd404494ea3389dba4",
+      "normalized_for_publication": true,
+      "published_sha256": "5e77b59fab0bfcb1cef581938dcc8a47afb7518664a497763d4c50711898e925"
+    },
+    {
+      "source": "yibu-youju/backend/app/core/__init__.py",
+      "destination": "baseline/backend/app/core/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/app/core/config.py",
+      "destination": "baseline/backend/app/core/config.py",
+      "source_sha256": "c82eff300c7d09ad1a045b0f1f543e4bcb0935788c63731d7666fb61cda5e7df",
+      "normalized_for_publication": true,
+      "published_sha256": "ef306f8b68c64f1864269891d353c23807d5685d62e514066598b33ee099ca08"
+    },
+    {
+      "source": "yibu-youju/backend/app/core/db.py",
+      "destination": "baseline/backend/app/core/db.py",
+      "source_sha256": "030f8dbef05586fd4ba1b9c512b2eb9fee67de79cd57d34cd732611ec2c1cab9",
+      "normalized_for_publication": true,
+      "published_sha256": "22b8642606ae619a1ea07b5e3c3bee49c2fc0ded5d0e583e810fba6e7ffadfc9"
+    },
+    {
+      "source": "yibu-youju/backend/app/core/security.py",
+      "destination": "baseline/backend/app/core/security.py",
+      "source_sha256": "ccafbd4a83e5a12943d8572527879919d0e4b5b7031f0aa3afc7d83abf8c973b",
+      "normalized_for_publication": true,
+      "published_sha256": "adb90882929ab33c238e2e9fa81b03fa0364c1a8cce0e9e70b98c68c321f468f"
+    },
+    {
+      "source": "yibu-youju/backend/app/crud.py",
+      "destination": "baseline/backend/app/crud.py",
+      "source_sha256": "40328ea15199884aa293ad7036a8f89a3caac1cc68f9448df39ba95c92c5a317",
+      "normalized_for_publication": true,
+      "published_sha256": "f69d79e858ee22cee7792494b0df0370afaed20439ed16bbf6f70767926254d1"
+    },
+    {
+      "source": "yibu-youju/backend/app/email-templates/new_account.html",
+      "destination": "baseline/backend/app/email-templates/new_account.html",
+      "source_sha256": "9c8577274d54ce810559f0c953a4825101dd08cafe65e3557adfcd0f3e05788b",
+      "normalized_for_publication": false,
+      "published_sha256": "9c8577274d54ce810559f0c953a4825101dd08cafe65e3557adfcd0f3e05788b"
+    },
+    {
+      "source": "yibu-youju/backend/app/email-templates/reset_password.html",
+      "destination": "baseline/backend/app/email-templates/reset_password.html",
+      "source_sha256": "11867481ad6d4cd702a497c540bb60b93ee0cb914c266e078dbf4741c2b9f64e",
+      "normalized_for_publication": false,
+      "published_sha256": "11867481ad6d4cd702a497c540bb60b93ee0cb914c266e078dbf4741c2b9f64e"
+    },
+    {
+      "source": "yibu-youju/backend/app/email-templates/test_email.html",
+      "destination": "baseline/backend/app/email-templates/test_email.html",
+      "source_sha256": "be392f061acbbdfef80c0c140952dd4381565b4f24012701c4631c6d71f25316",
+      "normalized_for_publication": false,
+      "published_sha256": "be392f061acbbdfef80c0c140952dd4381565b4f24012701c4631c6d71f25316"
+    },
+    {
+      "source": "yibu-youju/backend/app/initial_data.py",
+      "destination": "baseline/backend/app/initial_data.py",
+      "source_sha256": "3bc8041f1a44549a4ef134343ae4651b86c87721262e70ea2644c61de2d85cd2",
+      "normalized_for_publication": true,
+      "published_sha256": "29b51ebdd3c8cb9fde80a426f9c10af08c606ad0ffcec39a23fddc6587ab812c"
+    },
+    {
+      "source": "yibu-youju/backend/app/main.py",
+      "destination": "baseline/backend/app/main.py",
+      "source_sha256": "dc3d8efff477948a0f4f4cf1f4c1e297a3b27d7da734872139782418d63cc2af",
+      "normalized_for_publication": true,
+      "published_sha256": "e8b28b639d86c76dcf60348185c91125a789951ff085a5289d9f5add0854dfda"
+    },
+    {
+      "source": "yibu-youju/backend/app/models.py",
+      "destination": "baseline/backend/app/models.py",
+      "source_sha256": "aeeb0a85f23fc2d74ff442c924144fd43f9c31fe884fd0f39c2babf2f58c7b03",
+      "normalized_for_publication": true,
+      "published_sha256": "1b7384d0dc779cca9ebc9d2b05ccd1864988c2043a3692384ff7a731819050f0"
+    },
+    {
+      "source": "yibu-youju/backend/app/utils.py",
+      "destination": "baseline/backend/app/utils.py",
+      "source_sha256": "f0c3ece5701233cd905237584703a419f6f2bc3f08967db645bdcfaf74be80be",
+      "normalized_for_publication": true,
+      "published_sha256": "61fbc8476b1c1247b80e2220d28f89e33370434e2eb172f325ed0a6643e433b3"
+    },
+    {
+      "source": "yibu-youju/backend/pyproject.toml",
+      "destination": "baseline/backend/pyproject.toml",
+      "source_sha256": "af02a0595faf8ff29dbfc0897a4e0e24f4c7736d0fe92eb5332bbd1a675a4439",
+      "normalized_for_publication": true,
+      "published_sha256": "a2c49d0900e917115a65bd838c20e193940846e231d3fc44dc9670b6e2c1ee1e"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/format.sh",
+      "destination": "baseline/backend/scripts/format.sh",
+      "source_sha256": "f8f67a0c2a130e79faa599b445191edfe30bfbc1c2a4dedb03b096f4a0466d8f",
+      "normalized_for_publication": false,
+      "published_sha256": "f8f67a0c2a130e79faa599b445191edfe30bfbc1c2a4dedb03b096f4a0466d8f"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/lint.sh",
+      "destination": "baseline/backend/scripts/lint.sh",
+      "source_sha256": "b30c99ea9cb24ec7292e5a075226381fab2781261732b78b41b24b8ccf0d429b",
+      "normalized_for_publication": false,
+      "published_sha256": "b30c99ea9cb24ec7292e5a075226381fab2781261732b78b41b24b8ccf0d429b"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/prestart.sh",
+      "destination": "baseline/backend/scripts/prestart.sh",
+      "source_sha256": "0f5800314811d06f5ffd6902c946cd0720541604f9666b3f4b29f66d253179ea",
+      "normalized_for_publication": false,
+      "published_sha256": "0f5800314811d06f5ffd6902c946cd0720541604f9666b3f4b29f66d253179ea"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/test.sh",
+      "destination": "baseline/backend/scripts/test.sh",
+      "source_sha256": "fec2f31afa79d7a32fbde58d0f2c565fe5d24521e976f76ffda4bf2009753bc3",
+      "normalized_for_publication": false,
+      "published_sha256": "fec2f31afa79d7a32fbde58d0f2c565fe5d24521e976f76ffda4bf2009753bc3"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/tests-start.sh",
+      "destination": "baseline/backend/scripts/tests-start.sh",
+      "source_sha256": "a89e6b4383e2cc67df0aa4407261c7405de78e9c2eb71e018a5fcd96f199b50c",
+      "normalized_for_publication": false,
+      "published_sha256": "a89e6b4383e2cc67df0aa4407261c7405de78e9c2eb71e018a5fcd96f199b50c"
+    },
+    {
+      "source": "yibu-youju/backend/tests/__init__.py",
+      "destination": "baseline/backend/tests/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/tests/api/__init__.py",
+      "destination": "baseline/backend/tests/api/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/tests/api/routes/__init__.py",
+      "destination": "baseline/backend/tests/api/routes/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/tests/api/routes/test_items.py",
+      "destination": "baseline/backend/tests/api/routes/test_items.py",
+      "source_sha256": "b356e203937266454e0b0f1ea1af60e6d339639c0c21762ce7832ffb67fa2c1e",
+      "normalized_for_publication": true,
+      "published_sha256": "be711def80eb52caeb1f2b0d9a933e294ea4f2f798ae2dc8924fb41fdda5528a"
+    },
+    {
+      "source": "yibu-youju/backend/tests/api/routes/test_login.py",
+      "destination": "baseline/backend/tests/api/routes/test_login.py",
+      "source_sha256": "bafb82bc9446c518d950934899ed371516c877bd40a16291c724714fd4450454",
+      "normalized_for_publication": true,
+      "published_sha256": "8f34b92a572406ce10a8cf8595736ee8aea5c84268be123a4a84498074228b8c"
+    },
+    {
+      "source": "yibu-youju/backend/tests/api/routes/test_private.py",
+      "destination": "baseline/backend/tests/api/routes/test_private.py",
+      "source_sha256": "4c09c5b6baa1b5637771365ec59a29e228c77fc56df280a42f3e1bf375f57cb2",
+      "normalized_for_publication": true,
+      "published_sha256": "50b1d6d285a86c878b2501f8af68ce862dfb16dfccb7a4ab25b6c04143e40aa9"
+    },
+    {
+      "source": "yibu-youju/backend/tests/api/routes/test_users.py",
+      "destination": "baseline/backend/tests/api/routes/test_users.py",
+      "source_sha256": "b6eeb9b7372e3fb68ef960e3dff0d497ef8f7170554287abefd00f68fae435bf",
+      "normalized_for_publication": true,
+      "published_sha256": "20676b10b47c74505cca440ec00fd21d5d4b376f46190de2ec7c8194f579f1e8"
+    },
+    {
+      "source": "yibu-youju/backend/tests/conftest.py",
+      "destination": "baseline/backend/tests/conftest.py",
+      "source_sha256": "7984623a87ede784868c732afff6056c894dc08803de13fb10375a00d6a8e057",
+      "normalized_for_publication": true,
+      "published_sha256": "ccccd7fa1092256e889fcf88c5fbc3415a52e2964fd66cb775722dbe7a6dd763"
+    },
+    {
+      "source": "yibu-youju/backend/tests/crud/__init__.py",
+      "destination": "baseline/backend/tests/crud/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/tests/crud/test_user.py",
+      "destination": "baseline/backend/tests/crud/test_user.py",
+      "source_sha256": "1075e146c4458c9a01bd88b38f218308e710933ec519da6c454a857a1331e91d",
+      "normalized_for_publication": true,
+      "published_sha256": "e0c648b540d19f28e9f6a94fc025357698866361bdd29aa849e20d72e1f9e3bc"
+    },
+    {
+      "source": "yibu-youju/backend/tests/scripts/__init__.py",
+      "destination": "baseline/backend/tests/scripts/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/tests/utils/__init__.py",
+      "destination": "baseline/backend/tests/utils/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalized_for_publication": false,
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "yibu-youju/backend/tests/utils/item.py",
+      "destination": "baseline/backend/tests/utils/item.py",
+      "source_sha256": "2a82e3f7cacad9001a103b5dade07d7209c0a956dc6495789d719808a57d2e3f",
+      "normalized_for_publication": true,
+      "published_sha256": "b06bc74e8df901f56c07e7c82bfc67cc9cb4bea2a0b69b51306a4da5402f5577"
+    },
+    {
+      "source": "yibu-youju/backend/tests/utils/user.py",
+      "destination": "baseline/backend/tests/utils/user.py",
+      "source_sha256": "e010afc399b1f0f8612e9751640cd9a87ca9a7b695433bc4ae1b9f20602217ee",
+      "normalized_for_publication": true,
+      "published_sha256": "00fb245dc85bdcfda38f0d790597ec56581d1782fdc23fc72646237e6680cb27"
+    },
+    {
+      "source": "yibu-youju/backend/tests/utils/utils.py",
+      "destination": "baseline/backend/tests/utils/utils.py",
+      "source_sha256": "8facf9b6bf45fc0eaea50806b835dcf7950eb6ec4663d9a74977a2a6b8dc85d1",
+      "normalized_for_publication": true,
+      "published_sha256": "ec4de331ed328dda26e329024c1f598996845fb5d9f662413a99a5b39a7e7f70"
+    },
+    {
+      "source": "yibu-youju/bun.lock",
+      "destination": "baseline/bun.lock",
+      "source_sha256": "b15593f0e6d6f880f930ee176f0b8437da9c0414f9862b1af06c6d3f02e06fe1",
+      "normalized_for_publication": true,
+      "published_sha256": "252ee9651dbba91430371a1ca37206f97a277f9f94be20e6f161b3afa26a9dbe"
+    },
+    {
+      "source": "yibu-youju/frontend/.dockerignore",
+      "destination": "baseline/frontend/.dockerignore",
+      "source_sha256": "8dddd5bb92e96a3ba01bbf50fcbaebe72b7816695816f212e21d29022c6c11b7",
+      "normalized_for_publication": true,
+      "published_sha256": "c8015948b6eaefde5eaa3862f2fe5ce0245fcde4d6e66f7441dcdcbbed46e652"
+    },
+    {
+      "source": "yibu-youju/frontend/.gitignore",
+      "destination": "baseline/frontend/.gitignore",
+      "source_sha256": "6b686b98965028c7bd546ec8346e82536018a4266a090201b5c4dd26387337a4",
+      "normalized_for_publication": true,
+      "published_sha256": "ebf776d43f9a878b0b8330e92e0931f5d8dc714cbb69c9c28cf55542ea80df91"
+    },
+    {
+      "source": "yibu-youju/frontend/Dockerfile.playwright",
+      "destination": "baseline/frontend/Dockerfile.playwright",
+      "source_sha256": "5e9684ff6d53e695d918582b8271712d67fa4134ab50976e787d366081dd9236",
+      "normalized_for_publication": true,
+      "published_sha256": "09545242b85278ff76ba9669676074bd1fed1bd71fd049520dbdb604420b13dd"
+    },
+    {
+      "source": "yibu-youju/frontend/README.md",
+      "destination": "baseline/frontend/README.md",
+      "source_sha256": "0d77d1ae5404166ad7597f9e595a17599114221fe92c4596ad35921e929e55a9",
+      "normalized_for_publication": true,
+      "published_sha256": "b2f5cd374fb149b4620d5fbb1334e223894a7109be864f0455634106feeaf01b"
+    },
+    {
+      "source": "yibu-youju/frontend/biome.json",
+      "destination": "baseline/frontend/biome.json",
+      "source_sha256": "c5b2addb7d82a9429161bf0f023bb8b0a2c27445c5020ef6524c0e488c0b9ba5",
+      "normalized_for_publication": true,
+      "published_sha256": "ab62b669ad5551af1317832509d40278e0d0d9ee35addc19bc18e51ba64ad8a3"
+    },
+    {
+      "source": "yibu-youju/frontend/components.json",
+      "destination": "baseline/frontend/components.json",
+      "source_sha256": "265a8e2ddf7afd35ff1cb261b05e369574e191f433763fab4ccbe534ecd925fd",
+      "normalized_for_publication": true,
+      "published_sha256": "b08f7d9041f8796656aa56722c74d1712c34bf7df4acbf981f973842b09d4424"
+    },
+    {
+      "source": "yibu-youju/frontend/index.html",
+      "destination": "baseline/frontend/index.html",
+      "source_sha256": "279aebac78805f0ec47da7b79a78ce8beadf841f1d35698ae6a6a1b2badcae79",
+      "normalized_for_publication": true,
+      "published_sha256": "1668a348040e140f8aa153398f8a25fc5e2d95317d4dc3cf8412b996e68525f5"
+    },
+    {
+      "source": "yibu-youju/frontend/openapi-ts.config.ts",
+      "destination": "baseline/frontend/openapi-ts.config.ts",
+      "source_sha256": "58cb806aef852fc833fd7dba32c4426716e06f504f7f8cf232da8ffce5ed10ce",
+      "normalized_for_publication": true,
+      "published_sha256": "885ece759579ff239ee55e05143a01bbdaf03a0545c240be870677d7819486cf"
+    },
+    {
+      "source": "yibu-youju/frontend/package.json",
+      "destination": "baseline/frontend/package.json",
+      "source_sha256": "ff15d7b56bc15beef9b13c8cfce6394bba97ae40b438b36c8b461f16bad01fa4",
+      "normalized_for_publication": true,
+      "published_sha256": "6bcc1cc7054e477ed9a03237b891b052040db30eac7b3dd4d315db49664cfc0e"
+    },
+    {
+      "source": "yibu-youju/frontend/playwright.config.ts",
+      "destination": "baseline/frontend/playwright.config.ts",
+      "source_sha256": "e9d5165d3aacc09577defda185fbbeec45cfaa3b9c3bea01cf6f381f116bbfde",
+      "normalized_for_publication": true,
+      "published_sha256": "6b2552f656b75af4dca3a99b780bd1e0241d833df9e4350dbc0f9e98b27bf34f"
+    },
+    {
+      "source": "yibu-youju/frontend/public/assets/images/fastapi-icon-light.svg",
+      "destination": "baseline/frontend/public/assets/images/fastapi-icon-light.svg",
+      "source_sha256": "debe5ae16d2ecca1f0dabdf9e9ad60a2115e16f99b71fff74bfafceb3652786c",
+      "normalized_for_publication": true,
+      "published_sha256": "55625dea14977c96b3eba98f0937aeab147aee3e6dd6faabf8fed0928d25bad8"
+    },
+    {
+      "source": "yibu-youju/frontend/public/assets/images/fastapi-icon.svg",
+      "destination": "baseline/frontend/public/assets/images/fastapi-icon.svg",
+      "source_sha256": "ba139946f0360efb296d10e4b3b96ea34461e95bbe7d2090535f123d4814bef7",
+      "normalized_for_publication": true,
+      "published_sha256": "3da686511baca6148e047922df3e72d562d9543b029b634aefd0df13611560e9"
+    },
+    {
+      "source": "yibu-youju/frontend/public/assets/images/fastapi-logo-light.svg",
+      "destination": "baseline/frontend/public/assets/images/fastapi-logo-light.svg",
+      "source_sha256": "51825f2b3fad62add0540b9d77b0966860c1a9aa7fe55775037b44508069380c",
+      "normalized_for_publication": true,
+      "published_sha256": "dde4a5c3806e4152443130d61d0550708fe4a5fb2a9d64600f87f558ee746d50"
+    },
+    {
+      "source": "yibu-youju/frontend/public/assets/images/fastapi-logo.svg",
+      "destination": "baseline/frontend/public/assets/images/fastapi-logo.svg",
+      "source_sha256": "425363ddfb693796f9d7416bb04e0c9e55c80424fcf8f0052f1c00bef9e42bae",
+      "normalized_for_publication": true,
+      "published_sha256": "886c844d0e2a108c3a4d6223da46810423646bc11913d1a21a5deeae54a68c6c"
+    },
+    {
+      "source": "yibu-youju/frontend/public/assets/images/favicon.png",
+      "destination": "baseline/frontend/public/assets/images/favicon.png",
+      "source_sha256": "d16f72cf5a2773eba499cc7f3db1923c6f5f73de990f739e3a05806aafec15b7",
+      "normalized_for_publication": false,
+      "published_sha256": "d16f72cf5a2773eba499cc7f3db1923c6f5f73de990f739e3a05806aafec15b7"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/client.gen.ts",
+      "destination": "baseline/frontend/src/client/client.gen.ts",
+      "source_sha256": "ad42da21be5c725a6e29021067ebf08bf4d83feb1820e5ee61846c3e9f5ab409",
+      "normalized_for_publication": true,
+      "published_sha256": "780a350abae0a5af3bde2ec31b258cb2bf4aba6e11199e6824b0d2f156634b1c"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/client/client.gen.ts",
+      "destination": "baseline/frontend/src/client/client/client.gen.ts",
+      "source_sha256": "99ea5b31451d3b9778bfede0790644e527331737584d1d254af805fdb27ecc24",
+      "normalized_for_publication": true,
+      "published_sha256": "37a505d099fb4fdd169076aef36c1d48724e2fc658cbaaf32fec7dfe14c560b7"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/client/index.ts",
+      "destination": "baseline/frontend/src/client/client/index.ts",
+      "source_sha256": "3c0681fc7e5d9ae09aa943aade190098ad663fa9dc318ed9201e2c0bf8b89f82",
+      "normalized_for_publication": true,
+      "published_sha256": "10d237adce74cfc87181687c67a53098e6879c88958eed03df729267bd999f5a"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/client/types.gen.ts",
+      "destination": "baseline/frontend/src/client/client/types.gen.ts",
+      "source_sha256": "bb675501cb036d17a269777ad1c0ddb554add8bbd502acd6b4a4711797dda35d",
+      "normalized_for_publication": true,
+      "published_sha256": "6d6757537f8b70a30586c635e0f534d45c2894b31a9b8049fc19bd0b80853eb6"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/client/utils.gen.ts",
+      "destination": "baseline/frontend/src/client/client/utils.gen.ts",
+      "source_sha256": "f3f9a5aeabee302c418b7eee119d7c89c30fd3d34969416b4a03d7f741433422",
+      "normalized_for_publication": true,
+      "published_sha256": "681e60a1be0343f4c38064268ca1e60f777251f3b1258a4571e0e75c1cff3d51"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/auth.gen.ts",
+      "destination": "baseline/frontend/src/client/core/auth.gen.ts",
+      "source_sha256": "4d5edc43a46da30e3b7c06c121e5171febfac8701f49ed72490bbe50f6bdacf0",
+      "normalized_for_publication": true,
+      "published_sha256": "dd54b258145c9a9b2fb58dce516e13e20075ee726e7fd4a19e04610f96f5d338"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/bodySerializer.gen.ts",
+      "destination": "baseline/frontend/src/client/core/bodySerializer.gen.ts",
+      "source_sha256": "124cc958d7e1ba1c47e4fd9aed3b844fb916c2ed62d9944fbe614a02f9631d3f",
+      "normalized_for_publication": true,
+      "published_sha256": "a74163de6731f06f185948895cc4b5f8900e7d30ce76b9588717bad99ab165a7"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/params.gen.ts",
+      "destination": "baseline/frontend/src/client/core/params.gen.ts",
+      "source_sha256": "1dd887ec7779f6f3bbc1021a234ae0777bd380fe94bb149a5287979c5f60bb1a",
+      "normalized_for_publication": true,
+      "published_sha256": "8154faeec7d7ad3c69cbb3c744974a8e80cea85db2875b00207b182afaa7dc60"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/pathSerializer.gen.ts",
+      "destination": "baseline/frontend/src/client/core/pathSerializer.gen.ts",
+      "source_sha256": "8facbb31baa8f4df20f74e6b2927cf02e8c5f2c8e4afceb6b1d7859cf1407a61",
+      "normalized_for_publication": true,
+      "published_sha256": "41449b1807cd47b280b2c16e9684ec297b867e11f9f90dd1cb053408b58ed387"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/queryKeySerializer.gen.ts",
+      "destination": "baseline/frontend/src/client/core/queryKeySerializer.gen.ts",
+      "source_sha256": "a9c3f80959671ec3081281bc4f86968b9a9acfad68e85e1affe54433b5817dd3",
+      "normalized_for_publication": true,
+      "published_sha256": "293a195d9a833f829ab172b024d68186d6a19e6b3636f14ae9b9d10858e7bfd0"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/serverSentEvents.gen.ts",
+      "destination": "baseline/frontend/src/client/core/serverSentEvents.gen.ts",
+      "source_sha256": "595dee6d5410d500769a4792c1740b6fd9bb83c6deca9c49222d560893c1e07e",
+      "normalized_for_publication": true,
+      "published_sha256": "df993567abbe3e5b477d81517fb967cf63cf40b7866957d5dc6cc03238cb1426"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/types.gen.ts",
+      "destination": "baseline/frontend/src/client/core/types.gen.ts",
+      "source_sha256": "0d0336f644ee47a218ac36a8804813fd86877fb3df3e6193b8e69c041c341eab",
+      "normalized_for_publication": true,
+      "published_sha256": "2bfa0ff7c4a4c9694e36c55c1c11ffd839d7f1f5b04490733a5343b9245361a8"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/core/utils.gen.ts",
+      "destination": "baseline/frontend/src/client/core/utils.gen.ts",
+      "source_sha256": "bbd79fd03c98ea55e1b125f97e22d7f9a9ae80cdb7df7a3f9b41ef80b703eca0",
+      "normalized_for_publication": true,
+      "published_sha256": "55d7b2b7271f508556793d7e03aa62562af8c3ac14d197346a2154d9025b98b3"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/index.ts",
+      "destination": "baseline/frontend/src/client/index.ts",
+      "source_sha256": "5c2a6b25711681ae5c5b65d144128459d6e591b0a083eb9d1fbcc5bc6f2311e5",
+      "normalized_for_publication": true,
+      "published_sha256": "38c839694ee21961c506b951592a6cd5bbe866b0d2e6e09a728614cc912d31e7"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/sdk.gen.ts",
+      "destination": "baseline/frontend/src/client/sdk.gen.ts",
+      "source_sha256": "c4fb6050993bda1cfa75b708cced8904094f6a5121ff461ec76f20c257886d84",
+      "normalized_for_publication": true,
+      "published_sha256": "16b436bc3c8b5cdc4474cefdd00ebc23046f5a4545ef9ea5d3d53acf3b82818c"
+    },
+    {
+      "source": "yibu-youju/frontend/src/client/types.gen.ts",
+      "destination": "baseline/frontend/src/client/types.gen.ts",
+      "source_sha256": "1121311eafd01b38094778905fbd8baf87b146eccbf252a3988788fb426dea43",
+      "normalized_for_publication": true,
+      "published_sha256": "8d80ce774ec90437b7d11dc1c7f75b19af07565b4af36f5082fd652f9941f84f"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Admin/AddUser.tsx",
+      "destination": "baseline/frontend/src/components/Admin/AddUser.tsx",
+      "source_sha256": "aa72a81f29e0a59e4ab6e5788c33fb78e8405728f8b7a8642c1c5177017b376a",
+      "normalized_for_publication": true,
+      "published_sha256": "eea3774b590abffd8be0189d2239205eb7dd0fc8922d576ac6c4f6c9e0b290d9"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Admin/DeleteUser.tsx",
+      "destination": "baseline/frontend/src/components/Admin/DeleteUser.tsx",
+      "source_sha256": "933d31924fec598855e7f9fe5eac77c8b6c63f6e70e13ed4cc144904bedddaa6",
+      "normalized_for_publication": true,
+      "published_sha256": "7864b5eb06858f6a258134ef265807f664f2ad7900a573b206bf7d35467ed9e8"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Admin/EditUser.tsx",
+      "destination": "baseline/frontend/src/components/Admin/EditUser.tsx",
+      "source_sha256": "7011524c326d400c6351ca0c13ba26c93d331440a732455d4f6bc36f70d02082",
+      "normalized_for_publication": true,
+      "published_sha256": "38e1facd4c3701298d0323848a944b1822df34a4c152e6fbda2969e99773e374"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Admin/UserActionsMenu.tsx",
+      "destination": "baseline/frontend/src/components/Admin/UserActionsMenu.tsx",
+      "source_sha256": "c696383974b63f6270e31b5b5f646a893900e8e5e556e58ec8e054fe99d2e611",
+      "normalized_for_publication": true,
+      "published_sha256": "e14ad86f1d953b389b6de71387db935435092cb293901724aad63beaa91540cf"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Admin/columns.tsx",
+      "destination": "baseline/frontend/src/components/Admin/columns.tsx",
+      "source_sha256": "4e7c0db1f63d4087bfd3bf97cad5fc0ad884fc7d1ac6888c40de4f6b0834d95a",
+      "normalized_for_publication": true,
+      "published_sha256": "8c638a673b8f538d264cf6657ae7b122003c507421cab65a3968868c9d0d3cff"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Common/Appearance.tsx",
+      "destination": "baseline/frontend/src/components/Common/Appearance.tsx",
+      "source_sha256": "aaaf46207ceafe3644b2b3bc5a97977594b44cd524d486b642fe2d4613134bdb",
+      "normalized_for_publication": true,
+      "published_sha256": "82b5821bacf824b685660e7f3f85881fd477a74cdfd414394956699fc07d9f9b"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Common/AuthLayout.tsx",
+      "destination": "baseline/frontend/src/components/Common/AuthLayout.tsx",
+      "source_sha256": "df9860ffbe36718d2cf6ef73d921ae8240bc0349ac0644b650f89b0726856284",
+      "normalized_for_publication": true,
+      "published_sha256": "64aab97b25f54e17337f10036adaa0e1e6ce218915ffb6948a6fbd1d9689ffc8"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Common/DataTable.tsx",
+      "destination": "baseline/frontend/src/components/Common/DataTable.tsx",
+      "source_sha256": "53bce1658cb0c3b832c2226363771608fb2e4149d0892ba4ee13d3ed4240c360",
+      "normalized_for_publication": true,
+      "published_sha256": "97eec637ffd61e935c83e607575c70fd18450ce5c28a7d8afeaa7b548073c249"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Common/ErrorComponent.tsx",
+      "destination": "baseline/frontend/src/components/Common/ErrorComponent.tsx",
+      "source_sha256": "580cc24e1f4bbdffed3d3b4d341520e93465cd8134ad851bf453163d0487736b",
+      "normalized_for_publication": true,
+      "published_sha256": "768442d6ed11a8f9d6566edbafb33e51c015a10e98d2224d870a2b36a4022db9"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Common/Footer.tsx",
+      "destination": "baseline/frontend/src/components/Common/Footer.tsx",
+      "source_sha256": "6259b7edc52898b476ee2345defd5cdd7e1f276dfb4474735fcd7674dba8c7f1",
+      "normalized_for_publication": true,
+      "published_sha256": "fa28fcc688557af3e13399b782d53b8bfb297b557276cb4a826471ed6e6e88a4"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Common/Logo.tsx",
+      "destination": "baseline/frontend/src/components/Common/Logo.tsx",
+      "source_sha256": "ceb29700c8b6eeb5c2900d8a24e778fa6fe05868288b4213f0620748fc01e5ed",
+      "normalized_for_publication": true,
+      "published_sha256": "83283f87b14382ea8d8b81b557d73515830cbe37f612903a6435649c2c0d64d7"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Common/NotFound.tsx",
+      "destination": "baseline/frontend/src/components/Common/NotFound.tsx",
+      "source_sha256": "490c2f0e259c4b03b7b5d361b59702f85a25212aae1df3c1c38353eeb41ccf0e",
+      "normalized_for_publication": true,
+      "published_sha256": "5b70d5ce7945430189efe8fb8e992a0303e9c727db422c9744c99fcca46e8c95"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Items/AddItem.tsx",
+      "destination": "baseline/frontend/src/components/Items/AddItem.tsx",
+      "source_sha256": "f2058a9f1a3eb7c1b6238a8ee15c3d765d2aaedbb24fd6338a1e8fe95eeab280",
+      "normalized_for_publication": true,
+      "published_sha256": "104d4f88e2eb2f6d14b0d689af54826bec054d87ca955fa3e6dcfd6f1b217dd5"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Items/DeleteItem.tsx",
+      "destination": "baseline/frontend/src/components/Items/DeleteItem.tsx",
+      "source_sha256": "a093617565bb7e133b428aae3280a461ff11f8bb1b33eb870f44690a69b7bf33",
+      "normalized_for_publication": true,
+      "published_sha256": "27919680c16c204869f8832278f2b844dfe6d1c962f7156f932c5f297bee8b39"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Items/EditItem.tsx",
+      "destination": "baseline/frontend/src/components/Items/EditItem.tsx",
+      "source_sha256": "71c7a1445e2e77f6c0081a0869699be6c5dd97d6b1fe3b912bcaaa5fcf830871",
+      "normalized_for_publication": true,
+      "published_sha256": "1f9254c7d626638bb9eee3e56bde164727c24e28946adeb4cc45cad2c119e2cf"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Items/ItemActionsMenu.tsx",
+      "destination": "baseline/frontend/src/components/Items/ItemActionsMenu.tsx",
+      "source_sha256": "d4d3929f27fde06725a8c6e519124b686354f5d61a8c2f9963efa22075df8976",
+      "normalized_for_publication": true,
+      "published_sha256": "f61c68906b29ccc48c4857fbd23fbb5b0de967c9bc49802266d52c5f0fdfa9f1"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Items/columns.tsx",
+      "destination": "baseline/frontend/src/components/Items/columns.tsx",
+      "source_sha256": "3ebf015f87e8b5c826bdb7458a72c9b0c014502429e5847b319bd8af1c030ba4",
+      "normalized_for_publication": true,
+      "published_sha256": "cd6a13e189bba1bf3c489765352f4d2c53cd575bac7c527bb762a598e84c7cba"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Pending/PendingItems.tsx",
+      "destination": "baseline/frontend/src/components/Pending/PendingItems.tsx",
+      "source_sha256": "0129998686b068b1178541d535b4a6256ac15054452f0de7f1aa1081011b2b9f",
+      "normalized_for_publication": true,
+      "published_sha256": "be0df25b23c4d5adb8136a505f5224b490fd74c14e8e29cfac3a2f47c5a9d7d0"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Pending/PendingUsers.tsx",
+      "destination": "baseline/frontend/src/components/Pending/PendingUsers.tsx",
+      "source_sha256": "feff506131d02aa2f655e7848e683bcef450f24b9afff2c77f6c8bdd9085b47e",
+      "normalized_for_publication": true,
+      "published_sha256": "b473b70a19318ed3dc114c375b3e968a1b838e2480954a14114c248fa87115b0"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Sidebar/AppSidebar.tsx",
+      "destination": "baseline/frontend/src/components/Sidebar/AppSidebar.tsx",
+      "source_sha256": "0177d2328795b3448f918b5981279496e0ab63903d8e16b0486a19c844180a52",
+      "normalized_for_publication": true,
+      "published_sha256": "dfbc277713e052bcdb8f56154498b50ec593e76b6baecf1cd81bed572d7721b6"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Sidebar/Main.tsx",
+      "destination": "baseline/frontend/src/components/Sidebar/Main.tsx",
+      "source_sha256": "420d99809fbea5f40b7b5999683e2d01ed19bffd1675a913e21987be17369be7",
+      "normalized_for_publication": true,
+      "published_sha256": "beaedadfa152d6ecb026ac16d0382048c5ecfbf5f9d40c5837b4d395a4296090"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/Sidebar/User.tsx",
+      "destination": "baseline/frontend/src/components/Sidebar/User.tsx",
+      "source_sha256": "de0be01282f3b41849de84f93d1ea80f5ae5319ef96677b2ef9e19c91eb9f442",
+      "normalized_for_publication": true,
+      "published_sha256": "ad93de65db1b93ca37a08ce325012da85ecd6c4a36b23eee1d778a7297c4ccf7"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/UserSettings/ChangePassword.tsx",
+      "destination": "baseline/frontend/src/components/UserSettings/ChangePassword.tsx",
+      "source_sha256": "805300f6cfe858760b3b2a9e838c9b7305191c2de59b9e85e84a5247d0848c10",
+      "normalized_for_publication": true,
+      "published_sha256": "0194b3ec2bdcd4325bf79a1dada189b0a9277f6f1a452b9c05662a4e308acca3"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/UserSettings/DeleteAccount.tsx",
+      "destination": "baseline/frontend/src/components/UserSettings/DeleteAccount.tsx",
+      "source_sha256": "b495d25c87d9033fb59365e823d9e468567aa772c2b673700ab69512f0753b10",
+      "normalized_for_publication": true,
+      "published_sha256": "c46f0cab66aefac018c35fd04e0c6c556932764412ee7ffc4a286c268cb76b88"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/UserSettings/DeleteConfirmation.tsx",
+      "destination": "baseline/frontend/src/components/UserSettings/DeleteConfirmation.tsx",
+      "source_sha256": "4c05a545d93f86aae2eb5f865e07d7dc480bc5e6a76821efc4111f02b3f38576",
+      "normalized_for_publication": true,
+      "published_sha256": "7110ec9cfd75ccaa5f6589772e2b1deb5481b463a5001b3189d2830775825eeb"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/UserSettings/UserInformation.tsx",
+      "destination": "baseline/frontend/src/components/UserSettings/UserInformation.tsx",
+      "source_sha256": "a5204bde2eb737d59eec19cf009a122c30ebaab21e70880af6c10b332ada963a",
+      "normalized_for_publication": true,
+      "published_sha256": "e74b25691ce0916009da3b97cf421c41fb69edacfac4b9e82a219b547e431b39"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/theme-provider.tsx",
+      "destination": "baseline/frontend/src/components/theme-provider.tsx",
+      "source_sha256": "c46556c888a55e5b82dc021ee67b5236e196ffeb82796752a2fdadc593bdcdfa",
+      "normalized_for_publication": true,
+      "published_sha256": "76c5ea47fad4c5d2f4f9b6abe8705c9bdab94b5ba547a7e36e4a61ae6434228d"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/alert.tsx",
+      "destination": "baseline/frontend/src/components/ui/alert.tsx",
+      "source_sha256": "dc78e1d0b66138fc625777697f9c8da4a75722bb851f35e605336a86924048cf",
+      "normalized_for_publication": true,
+      "published_sha256": "49d8311589b810b106aada8ef7b13f70b2b1f68cfce4e1458b7f31a191f420e9"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/avatar.tsx",
+      "destination": "baseline/frontend/src/components/ui/avatar.tsx",
+      "source_sha256": "9e1c889d86818bfc638a0b77867251240fae25e99b6d40cdb40af43dbefe4099",
+      "normalized_for_publication": true,
+      "published_sha256": "e637ab3522c01631eac2e456588ef301314e2bb7940ebf7cd96e698a868d47bc"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/badge.tsx",
+      "destination": "baseline/frontend/src/components/ui/badge.tsx",
+      "source_sha256": "bc025d2531f9099d68aa08977604b2656cca7a940f973ebfbac61f8a7a4f9117",
+      "normalized_for_publication": true,
+      "published_sha256": "e7455feb113b38c59456ba29a9ec264b5ffa1daae8883866332ad637ffd57c31"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/button-group.tsx",
+      "destination": "baseline/frontend/src/components/ui/button-group.tsx",
+      "source_sha256": "aa1fc024738f58f768345f05410205b435520a9a44c97a1fb2405445ad8f52cd",
+      "normalized_for_publication": true,
+      "published_sha256": "ccbf09097f5ebf2eec86f1a96cb92e8dd39d251ebb5867394196c8b4fec68a5c"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/button.tsx",
+      "destination": "baseline/frontend/src/components/ui/button.tsx",
+      "source_sha256": "c654c51d9d5554a86cae38217ccf20c7b86e86f5383709cc7b9e2303bfecb6d0",
+      "normalized_for_publication": true,
+      "published_sha256": "8116b8529db6dc4e3c04bd5ebdd223a38535dcc737830d12ec4b290433d469d8"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/card.tsx",
+      "destination": "baseline/frontend/src/components/ui/card.tsx",
+      "source_sha256": "b0eaaddb642ccd241f040d8faaad416746cef984275ffe9c6e3509a2ad1636ce",
+      "normalized_for_publication": true,
+      "published_sha256": "2040cdff27cd1ed771e0ebbd15abcd73d31f2f1e4be6664bd6816fffd2a87476"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/checkbox.tsx",
+      "destination": "baseline/frontend/src/components/ui/checkbox.tsx",
+      "source_sha256": "ab66f86efa503ccff6c8a88b1b42bdacb33496c4345ec08f1fc6f55c29f2822d",
+      "normalized_for_publication": true,
+      "published_sha256": "2e577437a868f536e01e392dc32e825b3ac528a308ddf21848548b15e2e339ab"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/dialog.tsx",
+      "destination": "baseline/frontend/src/components/ui/dialog.tsx",
+      "source_sha256": "21a25bb2599e5bb7314196cf77721e439166da0774ac8e5aaed79061b354e074",
+      "normalized_for_publication": true,
+      "published_sha256": "eacce7500508317e3b31f6d071ac99a20d7f3f8dfc6119ffa6fe0ee8a194a6e0"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/dropdown-menu.tsx",
+      "destination": "baseline/frontend/src/components/ui/dropdown-menu.tsx",
+      "source_sha256": "2dc2ff5aee031a0c6095fef2d08b474d93d9a5319596495c71cb8372ed9c6d9d",
+      "normalized_for_publication": true,
+      "published_sha256": "f9e7b1d7e5aac315d8cebeb8ece21b53410823277dfd5b2a2fb8482faefaa5ee"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/form.tsx",
+      "destination": "baseline/frontend/src/components/ui/form.tsx",
+      "source_sha256": "b3f77be7a6b764bcaaee357f8d87fdd1fb5dcd408a7b11512ada397474323e4b",
+      "normalized_for_publication": true,
+      "published_sha256": "132c1ca3cf73cf0a7b2957c9fcf049b3504326692949b2fca4479c08c9ebf99c"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/input.tsx",
+      "destination": "baseline/frontend/src/components/ui/input.tsx",
+      "source_sha256": "aca03c716617068c0581b2284b3bddd0d3c3be8d8889bdb4f11168f8f779f1d7",
+      "normalized_for_publication": true,
+      "published_sha256": "56b7fd30208addbcc2468cfda4f5bc0a55342211deaab61ee35b1c352b1622f1"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/label.tsx",
+      "destination": "baseline/frontend/src/components/ui/label.tsx",
+      "source_sha256": "35eec7c90f982be9e8f12de58f4aa9f00b29f9baf8c41e4363a35d90ac39f9dd",
+      "normalized_for_publication": true,
+      "published_sha256": "9ec42c8a57e82311118b794318409ee02b2cebfa49ba6cce8457cff6448cd471"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/loading-button.tsx",
+      "destination": "baseline/frontend/src/components/ui/loading-button.tsx",
+      "source_sha256": "fad0aab27e6af409e6e6f00fa9ff3a5496a6e57a087ffe9c2a516cc56a172292",
+      "normalized_for_publication": true,
+      "published_sha256": "6f50c23341b853bbd04e183f261bb0a61f313c23cc45245d29bd3da1aa6f4068"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/pagination.tsx",
+      "destination": "baseline/frontend/src/components/ui/pagination.tsx",
+      "source_sha256": "ce2f6679702d9b537429b670ba8a423c478435d23ca95b249000bf6201819be1",
+      "normalized_for_publication": true,
+      "published_sha256": "53ffa0474d07dbfe1fb67f043a0ad7e7d24feecf950e65da8b929a90179c6ad4"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/password-input.tsx",
+      "destination": "baseline/frontend/src/components/ui/password-input.tsx",
+      "source_sha256": "543ccff277512a7161a38b17ee1246c5ffa4c989f08dc1816b85fd4a69f02ce7",
+      "normalized_for_publication": true,
+      "published_sha256": "c47b9f676d2c60b7167245bb83264620de094fb82ed9d906512b36ff6ff62bcd"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/select.tsx",
+      "destination": "baseline/frontend/src/components/ui/select.tsx",
+      "source_sha256": "e3483981613f4cf0c6200958aed2ea2f4e876872725e37103875debde1ce4b88",
+      "normalized_for_publication": true,
+      "published_sha256": "b21245a179f8a32bc48ac7b32dfce7b1e57e2e5032356595a6fdc4ba05aa5216"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/separator.tsx",
+      "destination": "baseline/frontend/src/components/ui/separator.tsx",
+      "source_sha256": "8768c843e3d3fd017a3dd4473518e0ce0a647a67d90832ed2c3d06b91b5a7251",
+      "normalized_for_publication": true,
+      "published_sha256": "18e5bf93682eb91864d9a1b8c0a09e46ad15d6ef1ffe97b3ccf9e4697756b6e2"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/sheet.tsx",
+      "destination": "baseline/frontend/src/components/ui/sheet.tsx",
+      "source_sha256": "dd270f5ad2a887963b965eafb13b3989a1674e6fe73c3b7f6cc5348ba77b4692",
+      "normalized_for_publication": true,
+      "published_sha256": "3d6a560c635fd91094e43191ecf73b124ccb2537e6060f85d5d31fcf68150e74"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/sidebar.tsx",
+      "destination": "baseline/frontend/src/components/ui/sidebar.tsx",
+      "source_sha256": "fff1bc8531e12c2c3e8fb029a6e720512860e1430ddf61de77290d7bbc98ff06",
+      "normalized_for_publication": true,
+      "published_sha256": "ff4a0ac6e1a0eb49a8c6a32b2700abb68afd68e40ce63a24af58e8bda6c0ae76"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/skeleton.tsx",
+      "destination": "baseline/frontend/src/components/ui/skeleton.tsx",
+      "source_sha256": "5e045dc0265a2a7ea183bb689b440068b9b18b59affc7039efd85ad1bd083ad8",
+      "normalized_for_publication": true,
+      "published_sha256": "f2aea81d8baf2b621945382aabac150e3db40f20d19ac1abea7aff805f1dc33c"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/sonner.tsx",
+      "destination": "baseline/frontend/src/components/ui/sonner.tsx",
+      "source_sha256": "535574678b8e51bb8a054148932d84c6930cdb3f1301939fff97439c491f8759",
+      "normalized_for_publication": true,
+      "published_sha256": "7cdf8bf6500c8c314480eacab216d15da939042746f1bb0397ff7811cf87d228"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/table.tsx",
+      "destination": "baseline/frontend/src/components/ui/table.tsx",
+      "source_sha256": "072de4d01f666a5d6e8b6dbae191d357cc713fdb4aa83dda18f754b51aa67e64",
+      "normalized_for_publication": true,
+      "published_sha256": "df6b4cd3b4a3a33ed6574f6d0f9948f4526e5fc422af29999c6229f3845cc3f1"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/tabs.tsx",
+      "destination": "baseline/frontend/src/components/ui/tabs.tsx",
+      "source_sha256": "afe2696a26188419b430f28c06f841089889559078aaca455fee53ebd66db35f",
+      "normalized_for_publication": true,
+      "published_sha256": "04898729c7430adad2dc2095d401a09fcaa0d1beb9441e4ff90747e3d200871d"
+    },
+    {
+      "source": "yibu-youju/frontend/src/components/ui/tooltip.tsx",
+      "destination": "baseline/frontend/src/components/ui/tooltip.tsx",
+      "source_sha256": "f35c603e851973b2785e16c55f206ff4ad7dcc39f60df648aa8d3a694825768a",
+      "normalized_for_publication": true,
+      "published_sha256": "ce5fb80f7e44be9cb7c0e7bf2e98a598e1c2989c2ba385a504fb892e62ba9f4e"
+    },
+    {
+      "source": "yibu-youju/frontend/src/hooks/useAuth.ts",
+      "destination": "baseline/frontend/src/hooks/useAuth.ts",
+      "source_sha256": "0ae3f193d17ce24418ef0e4bb8f9cd504d0411a46a5ba51a598f28349bcc670d",
+      "normalized_for_publication": true,
+      "published_sha256": "cf950406bc0173186a65b6a123a0932cb363d39ff2805fe7815a46216a7fd7c3"
+    },
+    {
+      "source": "yibu-youju/frontend/src/hooks/useCopyToClipboard.ts",
+      "destination": "baseline/frontend/src/hooks/useCopyToClipboard.ts",
+      "source_sha256": "b390f7754efb1315bb57deda56964cd4867190e86854c754b4bb00dd1dcdd73a",
+      "normalized_for_publication": true,
+      "published_sha256": "c3342c8a7880e40110115f3a8cbe48521a894a8c52e8b2992a47227b1e3b770b"
+    },
+    {
+      "source": "yibu-youju/frontend/src/hooks/useCustomToast.ts",
+      "destination": "baseline/frontend/src/hooks/useCustomToast.ts",
+      "source_sha256": "d0accabdb50ba9e7f24a955f71d210ed8ab06a0b9e498f098c05d9f3346eaff6",
+      "normalized_for_publication": true,
+      "published_sha256": "b0ff5e809f91cab3890683d0e93d83e24c49dd928769e033e3947c3d40b0c23c"
+    },
+    {
+      "source": "yibu-youju/frontend/src/hooks/useMobile.ts",
+      "destination": "baseline/frontend/src/hooks/useMobile.ts",
+      "source_sha256": "d2377fbad5ad2bdf7fa896a68c36ac8bf4aa74a974b2061f77b41ae58d623001",
+      "normalized_for_publication": true,
+      "published_sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "source": "yibu-youju/frontend/src/index.css",
+      "destination": "baseline/frontend/src/index.css",
+      "source_sha256": "a922c9ae26e6c590d2f167482913ad8aea0b8240aa291dc1d05e4cc3b7e24beb",
+      "normalized_for_publication": true,
+      "published_sha256": "0e9597c06e1e62957b6f27079268e72cc8cc46d561944e702fbd17e4351a8f7f"
+    },
+    {
+      "source": "yibu-youju/frontend/src/lib/utils.ts",
+      "destination": "baseline/frontend/src/lib/utils.ts",
+      "source_sha256": "7ff92063f6489f30a95e1963948aa830decc9757e733195eab72ce7928f436d3",
+      "normalized_for_publication": true,
+      "published_sha256": "51bbf14cd1f84f49aab2e0dbee420137015d56b6677bb439e83a908cd292cce1"
+    },
+    {
+      "source": "yibu-youju/frontend/src/main.tsx",
+      "destination": "baseline/frontend/src/main.tsx",
+      "source_sha256": "5252115a4bf116a3908513387d7f3be81ae6ba2360c8993d9d558f7042c60850",
+      "normalized_for_publication": true,
+      "published_sha256": "c7ac72a19b2e1184fafb305adc7762ee5eba766e577dcd3d9fabea0831369dad"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routeTree.gen.ts",
+      "destination": "baseline/frontend/src/routeTree.gen.ts",
+      "source_sha256": "9486092750dd89040460c59686205313b2a64205eee0d77d32783429860221b1",
+      "normalized_for_publication": true,
+      "published_sha256": "2fcdfd95fbfaf9381ccf123b73633f63fba4390932df0fb98ef5939ad2ee057c"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/__root.tsx",
+      "destination": "baseline/frontend/src/routes/__root.tsx",
+      "source_sha256": "b70b8fced1e4afa8ca1c3193269de1694695af9d75b52f15cd0537ee190e12e7",
+      "normalized_for_publication": true,
+      "published_sha256": "072dfb4530aa22b5337894387501a3420444411888f51da58fa8696f740a1a6b"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/_layout.tsx",
+      "destination": "baseline/frontend/src/routes/_layout.tsx",
+      "source_sha256": "287c4e896ea193fa41153fe47307b6eb429e73997935d437ab0d3374bf04c07b",
+      "normalized_for_publication": true,
+      "published_sha256": "a5a71bc508b5cabdcbd0b8994a35a3ddcdffe5fd15420d6cc291c09cbee03c24"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/_layout/admin.tsx",
+      "destination": "baseline/frontend/src/routes/_layout/admin.tsx",
+      "source_sha256": "9e1fa0495f4b30afc983b58a004a28c9a28b30d5ef14aeb6988221ecb4e2d34a",
+      "normalized_for_publication": true,
+      "published_sha256": "394456082df9c69898ca6272fb1de4ea4d8f6d1c2568455dc8ecdef990ae24d9"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/_layout/index.tsx",
+      "destination": "baseline/frontend/src/routes/_layout/index.tsx",
+      "source_sha256": "4d1f7d43b03f3cbb6c107729b2243e1c6a096ac05a738ff67b0b8572ae64c33d",
+      "normalized_for_publication": true,
+      "published_sha256": "4eef95514a26f8082ae6fb77302d3464d4fbfcb1fab10c74e0b6ef7793c0c14a"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/_layout/items.tsx",
+      "destination": "baseline/frontend/src/routes/_layout/items.tsx",
+      "source_sha256": "ef0de0a78f46254651cdc17db2859a8722f9c4edddc9f2beb0f36bf09a8aa6e1",
+      "normalized_for_publication": true,
+      "published_sha256": "e4c89bad013bde0d50782456e063bb51529b418a6f4578770e6e9d47530cdd50"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/_layout/settings.tsx",
+      "destination": "baseline/frontend/src/routes/_layout/settings.tsx",
+      "source_sha256": "080947a8b5096ebce75f3c6747b46c63871cba887b9897b07b0b96cc5e4ef1b6",
+      "normalized_for_publication": true,
+      "published_sha256": "835e4cc6223c563bc4bf82387b83067c1a490e836bab7f9ee0950d78dcab9d6d"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/login.tsx",
+      "destination": "baseline/frontend/src/routes/login.tsx",
+      "source_sha256": "9de816fd04ca631e3d681eff229d4ff3787ad39c990011129664c22b9f925686",
+      "normalized_for_publication": true,
+      "published_sha256": "534bbd1ba04d509fca7de74f6137a6e11af510701f15d02b5a20a58ba72b9ce0"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/recover-password.tsx",
+      "destination": "baseline/frontend/src/routes/recover-password.tsx",
+      "source_sha256": "2e1d944c37776e9c0d62d2b7b7a33e391db5377c30e06ffe3835a72ed795d22a",
+      "normalized_for_publication": true,
+      "published_sha256": "f0420b4c29e9b9fc60b0f795bb111e313df38071afce505cd5e88d1fe1987e3a"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/reset-password.tsx",
+      "destination": "baseline/frontend/src/routes/reset-password.tsx",
+      "source_sha256": "7f24fa1dc8d55b3deeaec400170098c336bb354fac587d89665d7f9f3c8c3897",
+      "normalized_for_publication": true,
+      "published_sha256": "bfc854382f5e39011c5d30609d7aec7d2c6d03d1feeb390379c155551f94020d"
+    },
+    {
+      "source": "yibu-youju/frontend/src/routes/signup.tsx",
+      "destination": "baseline/frontend/src/routes/signup.tsx",
+      "source_sha256": "5a4cbbd608076f94de67d97749ab0392f494c8f353f1ca181446cdf83aaf507b",
+      "normalized_for_publication": true,
+      "published_sha256": "109bfd36b9ca4b242e48cfdb5e92504e501d7f0e6e4f6271d202e145aca25aa5"
+    },
+    {
+      "source": "yibu-youju/frontend/src/utils.ts",
+      "destination": "baseline/frontend/src/utils.ts",
+      "source_sha256": "c97238fcbff7e30e819e2bcd73142341aa0665561944c36dc3eb75ed2ee0a867",
+      "normalized_for_publication": true,
+      "published_sha256": "9b6f7f99e59d88e204e8a4222ca6f084e715779d2255d80252d9e403a1197fc6"
+    },
+    {
+      "source": "yibu-youju/frontend/src/vite-env.d.ts",
+      "destination": "baseline/frontend/src/vite-env.d.ts",
+      "source_sha256": "2cbd94e6e363a613b75998ef96ae7bd9ab74c6c461986d66cfeee77f3c60ff65",
+      "normalized_for_publication": true,
+      "published_sha256": "75873b2909aa5b585bc861d571df7de483eaa69f9a87b8952fba3025f48c81ce"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/admin.spec.ts",
+      "destination": "baseline/frontend/tests/admin.spec.ts",
+      "source_sha256": "07503cbd4e8195377cde8339ccb1712e6764019c9eef3b4240a9138206c49c35",
+      "normalized_for_publication": true,
+      "published_sha256": "35c18e92e5ef812d8eff0e56bbd61a176fd8f7a9c5409d5fbdca813d29ad3f8e"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/auth.setup.ts",
+      "destination": "baseline/frontend/tests/auth.setup.ts",
+      "source_sha256": "be76a0497abfd7602bf3846306cf482c3fb6d015884fb44f1604bc1c63f4c40e",
+      "normalized_for_publication": true,
+      "published_sha256": "cb5df1cfc7ac7cb94442c230d79524cfe9cb9cd957ccc855e6d349b352598163"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/config.ts",
+      "destination": "baseline/frontend/tests/config.ts",
+      "source_sha256": "c3e2cb2cfea30f11695f9547c5bffc3fdecc87c13795e18773f7efcd524c64e8",
+      "normalized_for_publication": true,
+      "published_sha256": "a2094f4033a4b5f0ce799d5da74f9d7bdf277c60c3b81f34b4c2bfec3964eacd"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/items.spec.ts",
+      "destination": "baseline/frontend/tests/items.spec.ts",
+      "source_sha256": "3918505feadc1878d2962062552f732db0148cb08513f155e63c9f3e86c9cfd2",
+      "normalized_for_publication": true,
+      "published_sha256": "147fff53441b6e3fe923ce694f87d9b080089ef7ae1523a3bcae94dde7193929"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/login.spec.ts",
+      "destination": "baseline/frontend/tests/login.spec.ts",
+      "source_sha256": "e225088590ea79d83fc42ca6ec4231f0fcb819030e48257101c915305384a250",
+      "normalized_for_publication": true,
+      "published_sha256": "829cbe94ba6eb3e5a35aca84c0893ab7275fdbd614072daa3c0189b0f8b1f0c5"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/reset-password.spec.ts",
+      "destination": "baseline/frontend/tests/reset-password.spec.ts",
+      "source_sha256": "c2cdba019c261782d23a26d8b797b3d9ec5405ea18596187b595f76c28c83187",
+      "normalized_for_publication": true,
+      "published_sha256": "4b5c6a88b16b94f3a5b7c4d30374ef429912850877f6753736e6120834532c02"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/sign-up.spec.ts",
+      "destination": "baseline/frontend/tests/sign-up.spec.ts",
+      "source_sha256": "fd5ca8d142b29e922c4d0d86a8838740fa67a729d387e3e696c3defba24cccef",
+      "normalized_for_publication": true,
+      "published_sha256": "c7d3f6586bd2bb7b21a516679b1c102ffb4b0591145e6153554e463a7a254392"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/user-settings.spec.ts",
+      "destination": "baseline/frontend/tests/user-settings.spec.ts",
+      "source_sha256": "d1d7ef1b68b93d2425247da8fc520ce3c0fcc6e932f4575718c8798250cdc315",
+      "normalized_for_publication": true,
+      "published_sha256": "7e7af9cd5d19b714cb395422418e6b199881aedc8cf556c86d97115536eb6644"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/utils/mailpit.ts",
+      "destination": "baseline/frontend/tests/utils/mailpit.ts",
+      "source_sha256": "d043cc0d5bc559047b7a02aea252d5ba77f57d49693fcbcd14e3e16d83885211",
+      "normalized_for_publication": true,
+      "published_sha256": "fc1784e8e2aabbe5f0aed55a3e065814f18467d469c25df8ffe56727d6953584"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/utils/privateApi.ts",
+      "destination": "baseline/frontend/tests/utils/privateApi.ts",
+      "source_sha256": "f18a79ce48ffa3c3d89e6aeb30d593c6f0bf33aed66e51c6922f33412e73ae5e",
+      "normalized_for_publication": true,
+      "published_sha256": "90beb583387ffbe003aed7046011de41118963ae7a6a436db722fa4fe818fa9d"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/utils/random.ts",
+      "destination": "baseline/frontend/tests/utils/random.ts",
+      "source_sha256": "208c0973ebe77cc9cc3968de710fd74264a4d7958e32b6ecdea87b8b96d197b4",
+      "normalized_for_publication": true,
+      "published_sha256": "9d449fd1d5ea2a07b1638380c28e1916de7cc7bf2613a4d8963bb2499c23d502"
+    },
+    {
+      "source": "yibu-youju/frontend/tests/utils/user.ts",
+      "destination": "baseline/frontend/tests/utils/user.ts",
+      "source_sha256": "5e4dfe00fa7b1de5337c8bc7dbf785c9a24866ecfd9a9cbf87a79c378e817bdd",
+      "normalized_for_publication": true,
+      "published_sha256": "161c6c87d3da96ad4c51243a63af5c1948bf86bf64a1e48d8a7998194efd9dbc"
+    },
+    {
+      "source": "yibu-youju/frontend/tsconfig.build.json",
+      "destination": "baseline/frontend/tsconfig.build.json",
+      "source_sha256": "376f1be87612e17632adfac2c8a4b3c79a540057b1a62783e5638a757fae1c89",
+      "normalized_for_publication": true,
+      "published_sha256": "3edbd3daae7a273235f3ee00e2d3f9f474e9a00585c6d84271e91fb6ab485856"
+    },
+    {
+      "source": "yibu-youju/frontend/tsconfig.json",
+      "destination": "baseline/frontend/tsconfig.json",
+      "source_sha256": "e15648a3bc7b6a70578ba5065a7fad47c3317fc9b7a301d044a4280fbb097f02",
+      "normalized_for_publication": true,
+      "published_sha256": "b0b432a03255240732e3fea5f26f9e37d7b34463caf169e0545eae046dba1d29"
+    },
+    {
+      "source": "yibu-youju/frontend/tsconfig.node.json",
+      "destination": "baseline/frontend/tsconfig.node.json",
+      "source_sha256": "6ec602b8aa146888c76f0b41ca3515f91f95919f6e6417a4670decaba8fcb982",
+      "normalized_for_publication": true,
+      "published_sha256": "9e2abb169ea87b7190613a1d4da57ca608463a453bd4231fa3aeee5e308370dd"
+    },
+    {
+      "source": "yibu-youju/frontend/vite.config.ts",
+      "destination": "baseline/frontend/vite.config.ts",
+      "source_sha256": "58aa8be12de30d3e216b45f86f695f12560a10250005e32d865b52a2a0b7f517",
+      "normalized_for_publication": true,
+      "published_sha256": "637f2a0a06077fc1ab0e02a4c40ef83a2ba4087886dbdabd1f3bbb946bebd6f1"
+    },
+    {
+      "source": "yibu-youju/package.json",
+      "destination": "baseline/package.json",
+      "source_sha256": "79ecfec975ff47fb62ec748dafc21227f9540c60732a381d961b00621d75b1f1",
+      "normalized_for_publication": true,
+      "published_sha256": "163147bc5eb115551352912b69fd5aff968c5a8792d8edaf53f870e45392e618"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/biome.json",
+      "destination": "baseline/packages/react-email/biome.json",
+      "source_sha256": "c5c006152a283b43227b63ea5780110ec7f67dfcc92e894d207b189383265136",
+      "normalized_for_publication": true,
+      "published_sha256": "3cfda9b216220d0db68a6d5fa8c5f6f89c9aded53fc4a096ba0ec47c073d0c41"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/emails/new_account.tsx",
+      "destination": "baseline/packages/react-email/emails/new_account.tsx",
+      "source_sha256": "dd3d2f7a662c289f73a58a3fd467d7e8fd974c12fcbd54a2ca5f06d9aad03a76",
+      "normalized_for_publication": true,
+      "published_sha256": "6b5f6642517d068ffb804d9a95c0ac53b4cfb92b263711e5f8992e74222e15a5"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/emails/reset_password.tsx",
+      "destination": "baseline/packages/react-email/emails/reset_password.tsx",
+      "source_sha256": "5828329cb71511b01f2e147f30de9e2cd26d94907018c94089a49bdbd5e0ce5e",
+      "normalized_for_publication": true,
+      "published_sha256": "fcfd1f78f94424993679557e313956612ed7b904597244f07c17e419a297f1e7"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/emails/test_email.tsx",
+      "destination": "baseline/packages/react-email/emails/test_email.tsx",
+      "source_sha256": "112988d138fdddf34c1c887db7ec91e2ca19eb1bc8bcdc5d113e2d515bd85abb",
+      "normalized_for_publication": true,
+      "published_sha256": "09f4af61e479b0e24ea0ced8eb9934ac321e6b61fb7de70cd791eb6aa3a0070a"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/package.json",
+      "destination": "baseline/packages/react-email/package.json",
+      "source_sha256": "1d4386fd6ebcb89bd5dd925bac73bad27cbcb076d6828cf7c6d27b31cc6e68b8",
+      "normalized_for_publication": true,
+      "published_sha256": "dcdf254172ad7149c6b24e6c24286c3457f5ce6f8cd2b11950a00418a95826a9"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/tsconfig.json",
+      "destination": "baseline/packages/react-email/tsconfig.json",
+      "source_sha256": "79973ef0fe606a19675574544eb681fdc6b8457c14a0b4a6775ba3543b98d683",
+      "normalized_for_publication": true,
+      "published_sha256": "88ac1fc9f8875d85844b83e45838bcfacceb2760adcf58ec5497cfcfc91a5014"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/ui/Button.tsx",
+      "destination": "baseline/packages/react-email/ui/Button.tsx",
+      "source_sha256": "500f985ad8a9d2a7f8c44bd3f292c2ee443a23006cc93ff83eb97541ff323163",
+      "normalized_for_publication": true,
+      "published_sha256": "2e9ead3a8a78eaaf9bf7b0377b570921ca206cc9f35179b0084ac4e509ff819d"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/ui/Callout.tsx",
+      "destination": "baseline/packages/react-email/ui/Callout.tsx",
+      "source_sha256": "7fcef2976ee6475793202210f2c1db55bef16baca391354661498a7b6bdb71f5",
+      "normalized_for_publication": true,
+      "published_sha256": "2264673ccb973ec9eb722fc4337067a66afd5d9c658a1355e243cacab7851a0c"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/ui/Heading.tsx",
+      "destination": "baseline/packages/react-email/ui/Heading.tsx",
+      "source_sha256": "d9df103c92ca022c286b065f28f118f0286a48a034646632ee15bd1d655b05d9",
+      "normalized_for_publication": true,
+      "published_sha256": "2b2757f73a941bc8d9f2c24db2460a08c543c95b1d4ff613b4282c10bb5c3eaf"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/ui/Layout.tsx",
+      "destination": "baseline/packages/react-email/ui/Layout.tsx",
+      "source_sha256": "278f54dd06c1098efd7952bf002069e0fa7181e73b894877da29c6558796fbcc",
+      "normalized_for_publication": true,
+      "published_sha256": "589ecc269adf2d1e3f0a09575c6d9a9c609c1c226c86622c63efe55bfb01b7d6"
+    },
+    {
+      "source": "yibu-youju/packages/react-email/ui/Link.tsx",
+      "destination": "baseline/packages/react-email/ui/Link.tsx",
+      "source_sha256": "9e520da1c9eccd78bb9f307675c52d15c79714088dda0cc20869aa6ac304eea4",
+      "normalized_for_publication": true,
+      "published_sha256": "08f3ec070446c524932957744a2f7b05697a8b850e94b07e8df914f2918d1c48"
+    },
+    {
+      "source": "yibu-youju/pyproject.toml",
+      "destination": "baseline/pyproject.toml",
+      "source_sha256": "f30c570b1aa3dd7839caf6445519fb4392881e130338636acbabe9e01a848b19",
+      "normalized_for_publication": true,
+      "published_sha256": "3380781f555000449b89eb82b477cd86d91027d6f20ee2a4e2cc42af843160d2"
+    },
+    {
+      "source": "yibu-youju/uv.lock",
+      "destination": "baseline/uv.lock",
+      "source_sha256": "774a067f544cd53f91c43e70e92beac9ac667c8a38a255f26bfa21e2a1dc5445",
+      "normalized_for_publication": true,
+      "published_sha256": "0b70f5b6fcbc69ddaace35bd66078bd92c4a381a6cded72c01ad65938c54ef50"
+    },
+    {
+      "source": "yibu-youju/compose.g0.yml",
+      "destination": "baseline/compose.g0.yml",
+      "source_sha256": "6e6c76ae13130dfa9b5fcf574100e68e38ff90aaf5aa91e7e00e4d590b858400",
+      "normalized_for_publication": false,
+      "published_sha256": "6e6c76ae13130dfa9b5fcf574100e68e38ff90aaf5aa91e7e00e4d590b858400"
+    },
+    {
+      "source": "yibu-youju/REUSE_MANIFEST.json",
+      "destination": "baseline/REUSE_MANIFEST.json",
+      "source_sha256": "6e9817f69d918da536337ce5da91296692767754a16e967badc3d9db91b05f70",
+      "normalized_for_publication": true,
+      "published_sha256": "ba4dac0d5038c47173ae064c64ad8e893dc02004d314cec0e1ee9737c3be74c6"
+    },
+    {
+      "source": "yibu-youju/backend/Dockerfile.g0",
+      "destination": "baseline/backend/Dockerfile.g0",
+      "source_sha256": "f54beb215b128a10cad42110dc8aab83a33a3df81c0defc2fbb0539317ee29a5",
+      "normalized_for_publication": false,
+      "published_sha256": "f54beb215b128a10cad42110dc8aab83a33a3df81c0defc2fbb0539317ee29a5"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/g0_pytest.py",
+      "destination": "baseline/backend/scripts/g0_pytest.py",
+      "source_sha256": "46fcc3546b7fd3d616d2dbc8e0061317ad36b464b5fab58a25241abbd7712562",
+      "normalized_for_publication": false,
+      "published_sha256": "46fcc3546b7fd3d616d2dbc8e0061317ad36b464b5fab58a25241abbd7712562"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/g0_runtime_probe.py",
+      "destination": "baseline/backend/scripts/g0_runtime_probe.py",
+      "source_sha256": "57daf5ee4500a99683f5c8475bbe9b26dc835fd054b14ac75b1d38efafd7f261",
+      "normalized_for_publication": false,
+      "published_sha256": "57daf5ee4500a99683f5c8475bbe9b26dc835fd054b14ac75b1d38efafd7f261"
+    },
+    {
+      "source": "yibu-youju/backend/scripts/g0_verify.py",
+      "destination": "baseline/backend/scripts/g0_verify.py",
+      "source_sha256": "bd69b3a12e84952d3780fce11d5075c391437428948f3a5a57332aa8aaecd51d",
+      "normalized_for_publication": false,
+      "published_sha256": "bd69b3a12e84952d3780fce11d5075c391437428948f3a5a57332aa8aaecd51d"
+    },
+    {
+      "source": "yibu-youju/scripts/initialize-g0.ps1",
+      "destination": "baseline/scripts/initialize-g0.ps1",
+      "source_sha256": "9167c71348d250d6c49734f707dec0e23bf01d03b063f420cf5b8a827eb1de99",
+      "normalized_for_publication": false,
+      "published_sha256": "9167c71348d250d6c49734f707dec0e23bf01d03b063f420cf5b8a827eb1de99"
+    },
+    {
+      "source": "yibu-youju/scripts/run-g0.ps1",
+      "destination": "baseline/scripts/run-g0.ps1",
+      "source_sha256": "58cf949e936a754ec316b029d1416eb0ab22c4670b234e6573634dce527ef0f5",
+      "normalized_for_publication": true,
+      "published_sha256": "c50f40ed5eee940f868b5150d3924698d971adfe440ebe7cd78006809536f259"
+    },
+    {
+      "source": "yibu-youju/.env.model.local.example",
+      "destination": "baseline/.env.model.local.example",
+      "source_sha256": "3caaf4a03a84e3a0157e0e058cdaf2b95a60bd94eedb8b4776d51becc94a26cd",
+      "normalized_for_publication": false,
+      "published_sha256": "3caaf4a03a84e3a0157e0e058cdaf2b95a60bd94eedb8b4776d51becc94a26cd"
+    },
+    {
+      "source": "yibu-youju/docs/model-selection.md",
+      "destination": "baseline/docs/model-selection.md",
+      "source_sha256": "3f4553b843e677f5bc1035b4659eff59016d40e69f47047411070ff32b05936c",
+      "normalized_for_publication": true,
+      "published_sha256": "3f4553b843e677f5bc1035b4659eff59016d40e69f47047411070ff32b05936c"
+    },
+    {
+      "source": "work/research_v6/verification_probe.py",
+      "destination": "research/verification_probe.py",
+      "source_sha256": "1c149c3ed4fed2d9c537bfbe07f26305b1ac3eb83f35602b69edcd5a47650a27",
+      "normalized_for_publication": false,
+      "published_sha256": "1c149c3ed4fed2d9c537bfbe07f26305b1ac3eb83f35602b69edcd5a47650a27"
+    },
+    {
+      "source": "work/research_v6/test_verification_probe.py",
+      "destination": "research/test_verification_probe.py",
+      "source_sha256": "7dfe2c5e923fbf67741618564ea94eca710cd350c4a6f82669fd7f790a477bed",
+      "normalized_for_publication": false,
+      "published_sha256": "7dfe2c5e923fbf67741618564ea94eca710cd350c4a6f82669fd7f790a477bed"
+    },
+    {
+      "source": "outputs/Anker_一步有据_深化技术方案_v6.md",
+      "destination": "docs/technical-design.md",
+      "source_sha256": "8041937a31ab6402f5401c632f07b694af539a33dd97b8a49eea683f927dca17",
+      "normalized_for_publication": true,
+      "published_sha256": "5f8f3695e7140579ab5278f3096e63eae7589829cd04bbac8a794915961e3636"
+    },
+    {
+      "source": "outputs/Anker_一步有据_科研真实性与可落地性复核_v6.md",
+      "destination": "docs/research-review.md",
+      "source_sha256": "c40e1a8d6bca2f95df9175d4e5acc1d498a40e2d56b5782c7eeaede49ba4010a",
+      "normalized_for_publication": true,
+      "published_sha256": "5e570c25104f1ac805d1c5015c1c174dfe1487069bb03ffd9c60b8acedaca796"
+    },
+    {
+      "source": "outputs/Anker_一步有据_详细开发计划与开源复用方案_v7.md",
+      "destination": "docs/implementation-plan-v7.md",
+      "source_sha256": "dbacaba69e8413296fc05b051ffdff93294920aa892c6231eed1efcfac8a2a50",
+      "normalized_for_publication": true,
+      "published_sha256": "7cac4196afc7c3edae1a775288c31b8798d9a9ed771e0f097a6523bfabaa6d5b"
+    },
+    {
+      "source": "outputs/Anker_一步有据_智能体执行设计与开发计划_v8.md",
+      "destination": "docs/agent-design-v8.md",
+      "source_sha256": "ba8a6c87aa1706bfb815c39bd9ddbd233e2a22b18bbd34e11152516bccf66814",
+      "normalized_for_publication": true,
+      "published_sha256": "a3219c873d1b9871d4d0843c2c09efc60667bc37edea78a7d3e3412e7a42008a"
+    },
+    {
+      "source": "outputs/Anker_一步有据_独立评审意见与采纳记录_v8.md",
+      "destination": "docs/review-decisions-v8.md",
+      "source_sha256": "70e72a501b5e23ee404fc2c313e0bf902759baab5c9bf6aecf2892bf7ec27a74",
+      "normalized_for_publication": true,
+      "published_sha256": "63acf180482a3de0c0d48941a92641b2b9bbd3320edbbc4dbed7c0d2ff5e5d7c"
+    },
+    {
+      "source": "outputs/Anker_一步有据_逐项开发与验收清单_v9.md",
+      "destination": "docs/development-checklist.md",
+      "source_sha256": "d91f159b69b4ed9bc189d66d4a551ca1669356151c25b5963d05b53e56d5e5cb",
+      "normalized_for_publication": true,
+      "published_sha256": "3824b09c32d7da12ae0d98b1abbf46879cd71508e4c056f5ec6b368dd4fa9858"
+    },
+    {
+      "source": "outputs/Anker_一步有据_具体方案说明_详细图文版_v1.md",
+      "destination": "docs/detailed-proposal.md",
+      "source_sha256": "cc06f35fa1e2abe6b3ebc65e9bf59688bf3b0253b33208815610509b325736c1",
+      "normalized_for_publication": true,
+      "published_sha256": "1d428946e7c32973bea6293f692e95e86d91c93f2426aea54ea1d177a1ad9e0c"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/01_architecture.puml",
+      "destination": "docs/diagrams/01_architecture.puml",
+      "source_sha256": "5ee671cb8c1a718083a36ee35ec3cae165be935a463b60427805f7e4e1bd9f09",
+      "normalized_for_publication": false,
+      "published_sha256": "5ee671cb8c1a718083a36ee35ec3cae165be935a463b60427805f7e4e1bd9f09"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/01_architecture.png",
+      "destination": "docs/diagrams/01_architecture.png",
+      "source_sha256": "d06c3a068c24f8ca60f5e0eea67aca804cb44e08b1685a65a88aaa58ec52f86c",
+      "normalized_for_publication": false,
+      "published_sha256": "d06c3a068c24f8ca60f5e0eea67aca804cb44e08b1685a65a88aaa58ec52f86c"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/01_architecture.svg",
+      "destination": "docs/diagrams/01_architecture.svg",
+      "source_sha256": "203ed70ad3f5508514de17a1b504a33c3f8d49b5df53382aba9b5c586b97f719",
+      "normalized_for_publication": false,
+      "published_sha256": "203ed70ad3f5508514de17a1b504a33c3f8d49b5df53382aba9b5c586b97f719"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/02_verification_flow.puml",
+      "destination": "docs/diagrams/02_verification_flow.puml",
+      "source_sha256": "ebb29b1d91a7ff687f82afb1c4a4cbceb87f3d0d1fb84ecb608b8a7ee2496398",
+      "normalized_for_publication": false,
+      "published_sha256": "ebb29b1d91a7ff687f82afb1c4a4cbceb87f3d0d1fb84ecb608b8a7ee2496398"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/02_verification_flow.png",
+      "destination": "docs/diagrams/02_verification_flow.png",
+      "source_sha256": "46917100d12d9ebd02d73cb6d880c013572f71a621c3bbe7c03aba6d6aa00dd7",
+      "normalized_for_publication": false,
+      "published_sha256": "46917100d12d9ebd02d73cb6d880c013572f71a621c3bbe7c03aba6d6aa00dd7"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/02_verification_flow.svg",
+      "destination": "docs/diagrams/02_verification_flow.svg",
+      "source_sha256": "ee0c42306abd4e5ad11603cac5acdc8baad77efc9472c2b3bf3f8f0a5dcd836c",
+      "normalized_for_publication": false,
+      "published_sha256": "ee0c42306abd4e5ad11603cac5acdc8baad77efc9472c2b3bf3f8f0a5dcd836c"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/03_request_sequence.puml",
+      "destination": "docs/diagrams/03_request_sequence.puml",
+      "source_sha256": "01fb3c064d5808f055ea0557ac1d6f428db52950d791815451f100141a743de3",
+      "normalized_for_publication": false,
+      "published_sha256": "01fb3c064d5808f055ea0557ac1d6f428db52950d791815451f100141a743de3"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/03_request_sequence.png",
+      "destination": "docs/diagrams/03_request_sequence.png",
+      "source_sha256": "25fcaada9913a3e0728399d36bed4360bf47296eb8926f70c67f0d7c46f730ec",
+      "normalized_for_publication": false,
+      "published_sha256": "25fcaada9913a3e0728399d36bed4360bf47296eb8926f70c67f0d7c46f730ec"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/03_request_sequence.svg",
+      "destination": "docs/diagrams/03_request_sequence.svg",
+      "source_sha256": "3c446528956b8d22bbc9ad1d0ac9ff920e7837f2e9bb5b9dd457ffbbb6830ce1",
+      "normalized_for_publication": false,
+      "published_sha256": "3c446528956b8d22bbc9ad1d0ac9ff920e7837f2e9bb5b9dd457ffbbb6830ce1"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/04_service_states.puml",
+      "destination": "docs/diagrams/04_service_states.puml",
+      "source_sha256": "6ff098b95af1b3265f5bacf292a3a5186d893a868fa9a15b8a7ddc8a77a81533",
+      "normalized_for_publication": false,
+      "published_sha256": "6ff098b95af1b3265f5bacf292a3a5186d893a868fa9a15b8a7ddc8a77a81533"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/04_service_states.png",
+      "destination": "docs/diagrams/04_service_states.png",
+      "source_sha256": "74c508f67f96d821afc708074d27744d37f60fbe8da2fbbc486c888aca918298",
+      "normalized_for_publication": false,
+      "published_sha256": "74c508f67f96d821afc708074d27744d37f60fbe8da2fbbc486c888aca918298"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/04_service_states.svg",
+      "destination": "docs/diagrams/04_service_states.svg",
+      "source_sha256": "d1dc48c640cc324623875038044f4638b93b744cf82b14e882df73117c927f86",
+      "normalized_for_publication": false,
+      "published_sha256": "d1dc48c640cc324623875038044f4638b93b744cf82b14e882df73117c927f86"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/05_problem_concept_ai.png",
+      "destination": "docs/diagrams/05_problem_concept_ai.png",
+      "source_sha256": "b77d1c8cf8381a0764c4b585e8636a6e8914028a50febab91872f8e0c265d14e",
+      "normalized_for_publication": false,
+      "published_sha256": "b77d1c8cf8381a0764c4b585e8636a6e8914028a50febab91872f8e0c265d14e"
+    },
+    {
+      "source": "outputs/方案说明图源_v1/06_interaction_concept_ai.png",
+      "destination": "docs/diagrams/06_interaction_concept_ai.png",
+      "source_sha256": "d62f87b8321d6e8de0e4bc949d212f001a08ed60aa7672d880ec0df0ab3c440c",
+      "normalized_for_publication": false,
+      "published_sha256": "d62f87b8321d6e8de0e4bc949d212f001a08ed60aa7672d880ec0df0ab3c440c"
+    }
+  ]
+}

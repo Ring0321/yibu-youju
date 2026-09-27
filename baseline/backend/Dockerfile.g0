@@ -1,0 +1,25 @@
+# Validation-only derivative of the locked upstream Dockerfile.
+FROM public.ecr.aws/docker/library/node:24.21.0-bookworm-slim@sha256:0e0ff40c39bc087845bfb27465a0df4ea419520094bc35842ff83dd8cbe6f9b6 AS frontend-build
+RUN npm install --global bun@1.4.2
+WORKDIR /app
+COPY package.json bun.lock ./
+COPY frontend/package.json ./frontend/
+COPY packages/react-email/package.json ./packages/react-email/
+RUN bun install --frozen-lockfile
+COPY frontend ./frontend
+WORKDIR /app/frontend
+RUN bun run build
+
+FROM public.ecr.aws/docker/library/python:3.14@sha256:be8ccd085666c34273c9dc5607c9842f8b2e3116128aae45148ce164c07ce09d
+COPY --from=ghcr.io/astral-sh/uv:0.9.26@sha256:9a23023be68b2ed09750ae636228e903a54a05ea56ed03a934d00fe9fbeded4b /uv /uvx /bin/
+ENV PYTHONUNBUFFERED=1 UV_LINK_MODE=copy UV_COMPILE_BYTECODE=1
+WORKDIR /app
+COPY pyproject.toml uv.lock ./
+COPY backend/pyproject.toml ./backend/
+RUN uv sync --frozen --package app --no-install-project
+COPY backend ./backend
+COPY --from=frontend-build /app/backend/app/frontend ./backend/app/frontend
+RUN uv sync --frozen --package app
+ENV PATH="/app/.venv/bin:$PATH"
+WORKDIR /app/backend
+CMD ["python", "scripts/g0_verify.py"]
