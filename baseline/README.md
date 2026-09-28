@@ -15,9 +15,9 @@
 
 ```powershell
 powershell -NoProfile -File scripts/initialize-g0.ps1
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase Build
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase Database
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase Tests
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Build -ProjectName yibu-g0-public
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Database -ProjectName yibu-g0-public
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Tests -ProjectName yibu-g0-public
 ```
 
 PowerShell 7 环境可将命令中的 `powershell` 替换为 `pwsh`。公开版脚本直接调用 Docker，不要求安装本机开发使用的命令包装工具。
@@ -27,25 +27,28 @@ PowerShell 7 环境可将命令中的 `powershell` 替换为 `pwsh`。公开版�
 ## 持久性和静态检查
 
 ```powershell
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase Write
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase RestartDatabase
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase Database
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase Read
-powershell -NoProfile -File scripts/run-g0.ps1 -Phase Lint
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Write -ProjectName yibu-g0-public
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase RestartDatabase -ProjectName yibu-g0-public
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Database -ProjectName yibu-g0-public
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Read -ProjectName yibu-g0-public
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Workflow -ProjectName yibu-g0-public
+powershell -NoProfile -File scripts/run-g0.ps1 -Phase Lint -ProjectName yibu-g0-public
 ```
 
-先完成 Tests 再进行 Write/RestartDatabase/Read。再次执行 Tests 可能清理测试用户与示例 Item，因此旧持久性结果不能自动延续。测试记录生成于本机 `evidence/g0/`，默认不提交。
+先完成 Tests 再进行 Write/RestartDatabase/Read。再次执行 Tests 可能清理测试用户与示例 Item，因此旧持久性结果不能自动延续。所有阶段使用同一项目名，记录生成于本机 `evidence/yibu-g0-public/`，默认不提交；不同项目名使用独立数据卷。
+
+Workflow 阶段运行独立的 `g0` 基础设施试验模块：18 项真实数据库、认证 HTTP、Worker 和检查点测试。该模块不导入产品应用，没有模型调用或售后维修功能。详细边界见 [G0 复现说明](../docs/g0-runtime.md)。
 
 完成后可停止数据库且保留数据卷：
 
 ```powershell
-docker compose --env-file .env.g0 -f compose.g0.yml stop db
+docker compose --project-name yibu-g0-public --env-file .env.g0 -f compose.g0.yml stop db
 ```
 
 不要替换为真实业务数据库。这里不提供删除数据卷或公网部署的自动命令。
 
 ## 验证口径
 
-2026-09-22 本地历史记录曾显示 58 项上游后端测试通过；本次公开发布不等于重新完成该套 Docker 测试。历史原始日志和本地凭据均未公开，请按上述入口自行复现。
+2026-09-28 已在 GitHub 临时 Linux 环境完整重建，并通过 58 项上游回归、18 项 G0 集成和 HTTP/数据库重启测试，见 [对应提交的验证记录](../docs/validation/g0-2026-09-28.md)。同日本机 Docker 因磁盘不足构建失败，因此这不是本机环境已恢复的声明。
 
 原开发目录中的 `audit-g0.ps1` 会检查上游远端与原提交，因此不适用于这个重新组织的发布仓库，没有直接复制。导出文件的原始与公开 SHA-256 记录于 [SOURCE_MANIFEST.json](../SOURCE_MANIFEST.json)。

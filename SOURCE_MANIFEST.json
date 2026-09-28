@@ -1514,7 +1514,9 @@
       "destination": "docs/development-checklist.md",
       "source_sha256": "d91f159b69b4ed9bc189d66d4a551ca1669356151c25b5963d05b53e56d5e5cb",
       "normalized_for_publication": true,
-      "published_sha256": "3824b09c32d7da12ae0d98b1abbf46879cd71508e4c056f5ec6b368dd4fa9858"
+      "published_sha256": "0a30299d1cd9da5d4f9c70f52661759d40c08b3d010c8acb8cdf41d6e421f24e",
+      "exported_sha256": "3824b09c32d7da12ae0d98b1abbf46879cd71508e4c056f5ec6b368dd4fa9858",
+      "modified_after_export": true
     },
     {
       "source": "outputs/Anker_一步有据_具体方案说明_详细图文版_v1.md",

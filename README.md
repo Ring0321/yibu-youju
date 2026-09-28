@@ -4,7 +4,7 @@
 
 > 当前发布的是研究机制、工程基线与详细开发计划，不是已完成的售后产品。真实模型、完整业务闭环和实机验证尚未验收；本仓库不是 Anker 官方项目，也不代表品牌背书。
 
-[自动测试与发布检查](https://github.com/Ring0321/yibu-youju/actions/workflows/research.yml) | [开源发布清单](docs/publication-checklist.md)
+[研究与发布检查](https://github.com/Ring0321/yibu-youju/actions/workflows/research.yml) | [数据库与恢复测试](https://github.com/Ring0321/yibu-youju/actions/workflows/g0.yml) | [开源发布清单](docs/publication-checklist.md)
 
 ## 核心问题
 
@@ -26,6 +26,7 @@
 | --- | --- | --- |
 | 有限状态机制研究 | [research](research/README.md) | 3 个布尔变量、8 个合成状态、20 项单元测试；不是真实设备诊断模型 |
 | 前后端工程基线 | [baseline](baseline/README.md) | 保留 FastAPI 上游应用源码、锁文件和隔离 G0 验证入口；登录与示例 Item 不是售后功能 |
+| 持久化与任务执行 | [G0 复现说明](docs/g0-runtime.md)、[运行证据](docs/validation/g0-2026-09-28.md) | 真实入队、跨进程恢复、幂等与并发输入验证；18 项集成测试通过，不是完整业务闭环 |
 | 技术与智能体设计 | [技术方案](docs/technical-design.md)、[Agent 设计](docs/agent-design-v8.md) | 目标设计与接口边界，未实现能力保持明确标注 |
 | 逐项开发清单 | [development-checklist.md](docs/development-checklist.md) | 41 个工作包、205 个子项；完成并有验证记录才勾销 |
 | 科研复核与评审记录 | [科研复核](docs/research-review.md)、[评审记录](docs/review-decisions-v8.md) | 已知限制、反例、研究假设与验收方法 |
@@ -57,6 +58,7 @@ python scripts/check_publication.py
 
 - 当前可核查状态及证据边界：[项目状态](docs/status.md)。
 - 完成一项、验证一项、勾销一项：[开发清单](docs/development-checklist.md)。
+- 当前进度：12/205 子项、1/41 工作包完成；产品验收仍为 0/28。
 - 历史估算与工程复用取舍：[实施计划 v7](docs/implementation-plan-v7.md)。更新设计优先参考 v8，执行状态参考 v9。
 - 贡献与安全要求：[贡献说明](CONTRIBUTING.md)、[安全说明](SECURITY.md)。
 
