@@ -1,0 +1,144 @@
+{
+  "source": {
+    "repository": "Ring0321/yibu-youju",
+    "run_id": 36373826658,
+    "commit": "d42baf4c392d0df50becd7de5dce9a65ba5fddf6",
+    "url": "https://github.com/Ring0321/yibu-youju/actions/runs/36373826658"
+  },
+  "environment": "GitHub-hosted ubuntu-24.04; isolated Docker Linux containers",
+  "upstream_tests_passed": 58,
+  "runtime": {
+    "write": {
+      "passed": true,
+      "item_id": "1ac474b7-abcd-41b3-8a28-77348bcae491",
+      "health_http": 200,
+      "static_http": 200,
+      "javascript_assets_checked": 1,
+      "read_http": 200,
+      "database_version": "PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+      "database_started": "2026-09-28T03:29:04.537867+00:00",
+      "database_restart_verified": false
+    },
+    "read": {
+      "passed": true,
+      "item_id": "1ac474b7-abcd-41b3-8a28-77348bcae491",
+      "health_http": 200,
+      "static_http": 200,
+      "javascript_assets_checked": 1,
+      "read_http": 200,
+      "database_version": "PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+      "database_started": "2026-09-28T03:29:17.538512+00:00",
+      "database_restart_verified": true
+    }
+  },
+  "workflow": {
+    "passed": true,
+    "counts": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "versions": {
+      "langgraph": "1.2.12",
+      "langgraph-checkpoint-postgres": "3.1.2",
+      "procrastinate": "3.10.0",
+      "psycopg": "3.3.4",
+      "fastapi": "0.141.1"
+    },
+    "python": "3.14.7",
+    "observations": [
+      {
+        "test": "test_http_to_worker_pause_and_resume_in_new_process",
+        "name": "waiting_seconds",
+        "value": "4.0"
+      },
+      {
+        "test": "test_http_to_worker_pause_and_resume_in_new_process",
+        "name": "worker_processes",
+        "value": "[74, 86, 94, 104]"
+      },
+      {
+        "test": "test_http_to_worker_pause_and_resume_in_new_process",
+        "name": "saved_checkpoint",
+        "value": "1f1baecc-ea59-6bdc-8000-ba45c12d1999"
+      },
+      {
+        "test": "test_http_to_worker_pause_and_resume_in_new_process",
+        "name": "resumed_checkpoint",
+        "value": "1f1baecd-1ffd-6561-8002-6507ebb3ace4"
+      },
+      {
+        "test": "test_http_to_worker_pause_and_resume_in_new_process",
+        "name": "original_command",
+        "value": "467525ef-22da-4b47-85f6-3267c5d4d9bb"
+      }
+    ],
+    "live_model_tested": false,
+    "physical_device_tested": false,
+    "crash_window_tested": false,
+    "generation_fencing_tested": false,
+    "persistent_call_budget_tested": false,
+    "product_acceptance": false
+  },
+  "migration": {
+    "versions": {
+      "langgraph": "1.2.12",
+      "langgraph-checkpoint-postgres": "3.1.2",
+      "procrastinate": "3.10.0",
+      "psycopg": "3.3.4"
+    },
+    "checkpoint_migration": 9
+  },
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check out source",
+      "conclusion": "success"
+    },
+    {
+      "name": "Initialize isolated random credentials",
+      "conclusion": "success"
+    },
+    {
+      "name": "Build the frozen frontend and backend",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run migration and upstream regression tests",
+      "conclusion": "success"
+    },
+    {
+      "name": "Verify HTTP assets and persistence across database restart",
+      "conclusion": "success"
+    },
+    {
+      "name": "Verify durable checkpoints and actual queue workers",
+      "conclusion": "success"
+    },
+    {
+      "name": "Lint project verification code",
+      "conclusion": "success"
+    },
+    {
+      "name": "Show sanitized machine-readable results",
+      "conclusion": "success"
+    },
+    {
+      "name": "Stop this job's database without deleting volumes",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Check out source",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "G0 infrastructure only; not product or physical-device acceptance"
+}
