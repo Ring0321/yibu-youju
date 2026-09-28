@@ -60,7 +60,7 @@ python scripts/check_publication.py
 - 历史估算与工程复用取舍：[实施计划 v7](docs/implementation-plan-v7.md)。更新设计优先参考 v8，执行状态参考 v9。
 - 贡献与安全要求：[贡献说明](CONTRIBUTING.md)、[安全说明](SECURITY.md)。
 
-团队分工：李鑫（队长）负责统筹、架构与后端；翁子衡负责智能体、证据机制与评测；张睿佟负责前端体验、联调与流程验证。
+团队分工：项目统筹与后端、智能体与验证机制、前端体验与流程验证。
 
 ## 许可与使用边界
 

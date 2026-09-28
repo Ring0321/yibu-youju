@@ -18,7 +18,8 @@
     "Missing private evidence labeled explicitly",
     "Machine workspace prefix removed",
     "G0 runner calls Docker without a local wrapper",
-    "UTF-8 text line endings normalized to LF for cross-platform Git checkouts"
+    "UTF-8 text line endings normalized to LF for cross-platform Git checkouts",
+    "Team member names removed from public documentation at the owner's request"
   ],
   "files": [
     {
@@ -1510,7 +1511,7 @@
       "destination": "docs/detailed-proposal.md",
       "source_sha256": "cc06f35fa1e2abe6b3ebc65e9bf59688bf3b0253b33208815610509b325736c1",
       "normalized_for_publication": true,
-      "published_sha256": "1d428946e7c32973bea6293f692e95e86d91c93f2426aea54ea1d177a1ad9e0c"
+      "published_sha256": "dbe60fb50daf978a3094962c13e11442587702a57cc97f1adea51c607194c7ea"
     },
     {
       "source": "outputs/方案说明图源_v1/01_architecture.puml",
