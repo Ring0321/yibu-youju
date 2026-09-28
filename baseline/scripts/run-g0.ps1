@@ -3,6 +3,9 @@ param(
     [ValidatePattern('^yibu-g0(?:-[a-z0-9-]+)?$')][string]$ProjectName = 'yibu-g0'
 )
 $ErrorActionPreference = 'Stop'
+if ($env:G0_IMAGE_REGISTRY -and $env:G0_IMAGE_REGISTRY -notin @('public.ecr.aws/docker/library', 'docker.io/library')) {
+    throw 'Only the two documented official image sources are allowed; pinned digests must remain unchanged.'
+}
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $root
 $evidence = Join-Path $root ('evidence/' + $ProjectName)

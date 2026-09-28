@@ -14,6 +14,9 @@ on:
 permissions:
   contents: read
 
+env:
+  G0_IMAGE_REGISTRY: docker.io/library
+
 jobs:
   integration:
     runs-on: ubuntu-24.04

@@ -2,7 +2,7 @@ name: yibu-g0
 
 services:
   db:
-    image: public.ecr.aws/docker/library/postgres:18@sha256:86c951e05bf56c93d95d397747fb8820ac76cc3bedb78f43abd83eedbe3666ae
+    image: ${G0_IMAGE_REGISTRY:-public.ecr.aws/docker/library}/postgres:18@sha256:86c951e05bf56c93d95d397747fb8820ac76cc3bedb78f43abd83eedbe3666ae
     environment:
       POSTGRES_DB: yibu_g0_test
       POSTGRES_USER: yibu_g0
@@ -20,6 +20,8 @@ services:
     build:
       context: .
       dockerfile: backend/Dockerfile.g0
+      args:
+        IMAGE_REGISTRY: ${G0_IMAGE_REGISTRY:-public.ecr.aws/docker/library}
     env_file: .env.g0
     environment:
       DATABASE_URL: postgresql://yibu_g0:${G0_DB_PASSWORD}@db:5432/yibu_g0_test

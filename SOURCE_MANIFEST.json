@@ -1389,7 +1389,7 @@
       "destination": "baseline/compose.g0.yml",
       "source_sha256": "6e6c76ae13130dfa9b5fcf574100e68e38ff90aaf5aa91e7e00e4d590b858400",
       "normalized_for_publication": false,
-      "published_sha256": "1a6d3ab854438b8572a048706ceeec314d4d087c89e8cd9b14f59d3f5bcb5d47",
+      "published_sha256": "72671db0be1dfa9be4c3c00a2527417db87511847481e314d7ea84bb50fc8d95",
       "exported_sha256": "6e6c76ae13130dfa9b5fcf574100e68e38ff90aaf5aa91e7e00e4d590b858400",
       "modified_after_export": true
     },
@@ -1405,7 +1405,9 @@
       "destination": "baseline/backend/Dockerfile.g0",
       "source_sha256": "f54beb215b128a10cad42110dc8aab83a33a3df81c0defc2fbb0539317ee29a5",
       "normalized_for_publication": false,
-      "published_sha256": "f54beb215b128a10cad42110dc8aab83a33a3df81c0defc2fbb0539317ee29a5"
+      "published_sha256": "9188ee5cb5d2593c535bc049357d42363977ccc926649412660de8c515b87fc3",
+      "exported_sha256": "f54beb215b128a10cad42110dc8aab83a33a3df81c0defc2fbb0539317ee29a5",
+      "modified_after_export": true
     },
     {
       "source": "yibu-youju/backend/scripts/g0_pytest.py",
@@ -1442,7 +1444,7 @@
       "destination": "baseline/scripts/run-g0.ps1",
       "source_sha256": "58cf949e936a754ec316b029d1416eb0ab22c4670b234e6573634dce527ef0f5",
       "normalized_for_publication": true,
-      "published_sha256": "702a3e23aa1b20136fa8944e51acc1b262a11295a3cba2a052a0c42627c5ff51",
+      "published_sha256": "d927fb3ed5a02288c2d4e8748b28d706961ba7f83180c9ceb4223e0942cfb977",
       "exported_sha256": "c50f40ed5eee940f868b5150d3924698d971adfe440ebe7cd78006809536f259",
       "modified_after_export": true
     },
