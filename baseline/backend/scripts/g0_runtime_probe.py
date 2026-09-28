@@ -6,6 +6,7 @@ import subprocess
 import sys
 import time
 from datetime import UTC, datetime
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -13,6 +14,19 @@ import httpx
 from sqlmodel import Session, text
 
 from app.core.db import engine, init_db
+
+
+class AssetParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.scripts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attributes = dict(attrs)
+        if tag == "script" and attributes.get("src"):
+            source = attributes["src"]
+            if source and source.startswith("/assets/"):
+                self.scripts.append(source)
 
 
 def main() -> None:
@@ -23,9 +37,13 @@ def main() -> None:
     if target.hostname != "db" or target.path != "/yibu_g0_test":
         raise RuntimeError("Refusing probe outside isolated G0 database")
     evidence = Path("/evidence")
+    evidence.mkdir(parents=True, exist_ok=True)
     with Session(engine) as session:
         init_db(session)
         database_version = session.exec(text("select version()")).one()[0]
+        database_started = (
+            session.exec(text("select pg_postmaster_start_time()")).one()[0].isoformat()
+        )
     process = subprocess.Popen(
         [
             "uvicorn",
@@ -60,6 +78,13 @@ def main() -> None:
             assert health.json() is True
             page = client.get("/")
             assert page.status_code == 200 and '<div id="root">' in page.text
+            assets = AssetParser()
+            assets.feed(page.text)
+            assert assets.scripts, "No built JavaScript asset referenced by the HTML"
+            for source in assets.scripts:
+                asset = client.get(source)
+                assert asset.status_code == 200 and len(asset.content) > 0
+                assert "javascript" in asset.headers.get("content-type", "")
             login = client.post(
                 "/api/v1/login/access-token",
                 data={
@@ -82,10 +107,20 @@ def main() -> None:
                 response.raise_for_status()
                 item = response.json()
                 marker.write_text(
-                    json.dumps({"item_id": item["id"], "title": item["title"]}),
+                    json.dumps(
+                        {
+                            "item_id": item["id"],
+                            "title": item["title"],
+                            "database_started": database_started,
+                        }
+                    ),
                     encoding="utf-8",
                 )
             expected = json.loads(marker.read_text(encoding="utf-8"))
+            if phase == "read":
+                assert database_started != expected["database_started"], (
+                    "Database restart was not observed"
+                )
             response = client.get(
                 "/api/v1/items/" + expected["item_id"], headers=headers
             )
@@ -97,8 +132,11 @@ def main() -> None:
                     "item_id": expected["item_id"],
                     "health_http": health.status_code,
                     "static_http": page.status_code,
+                    "javascript_assets_checked": len(assets.scripts),
                     "read_http": response.status_code,
                     "database_version": database_version,
+                    "database_started": database_started,
+                    "database_restart_verified": phase == "read",
                 }
             )
     finally:

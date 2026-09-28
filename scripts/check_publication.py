@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 from urllib.parse import unquote, urlsplit
 
@@ -22,10 +23,20 @@ RULES = {
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 
+def publication_files():
+    if (ROOT / ".git").exists():
+        result = subprocess.run(
+            ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+            cwd=ROOT, check=True, capture_output=True,
+        )
+        return sorted({ROOT / name.decode("utf-8") for name in result.stdout.split(b"\0") if name})
+    return sorted(ROOT.rglob("*"))
+
+
 def main() -> int:
     issues = []
     scanned = 0
-    for path in sorted(ROOT.rglob("*")):
+    for path in publication_files():
         relative = path.relative_to(ROOT)
         if any(part in SKIP_DIRS for part in relative.parts):
             continue

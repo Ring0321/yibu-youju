@@ -307,7 +307,9 @@
       "destination": "baseline/backend/pyproject.toml",
       "source_sha256": "af02a0595faf8ff29dbfc0897a4e0e24f4c7736d0fe92eb5332bbd1a675a4439",
       "normalized_for_publication": true,
-      "published_sha256": "a2c49d0900e917115a65bd838c20e193940846e231d3fc44dc9670b6e2c1ee1e"
+      "published_sha256": "8a3668c8460b9011c35d3c97751b642d7e0c389d27f7e0ace643b610d69a84d8",
+      "exported_sha256": "a2c49d0900e917115a65bd838c20e193940846e231d3fc44dc9670b6e2c1ee1e",
+      "modified_after_export": true
     },
     {
       "source": "yibu-youju/backend/scripts/format.sh",
@@ -1378,14 +1380,18 @@
       "destination": "baseline/uv.lock",
       "source_sha256": "774a067f544cd53f91c43e70e92beac9ac667c8a38a255f26bfa21e2a1dc5445",
       "normalized_for_publication": true,
-      "published_sha256": "0b70f5b6fcbc69ddaace35bd66078bd92c4a381a6cded72c01ad65938c54ef50"
+      "published_sha256": "122ff41fe5bb535a2a4d3a198eb8c5c20692ebc43c633dc67a42dc30c1fd7e77",
+      "exported_sha256": "0b70f5b6fcbc69ddaace35bd66078bd92c4a381a6cded72c01ad65938c54ef50",
+      "modified_after_export": true
     },
     {
       "source": "yibu-youju/compose.g0.yml",
       "destination": "baseline/compose.g0.yml",
       "source_sha256": "6e6c76ae13130dfa9b5fcf574100e68e38ff90aaf5aa91e7e00e4d590b858400",
       "normalized_for_publication": false,
-      "published_sha256": "6e6c76ae13130dfa9b5fcf574100e68e38ff90aaf5aa91e7e00e4d590b858400"
+      "published_sha256": "1a6d3ab854438b8572a048706ceeec314d4d087c89e8cd9b14f59d3f5bcb5d47",
+      "exported_sha256": "6e6c76ae13130dfa9b5fcf574100e68e38ff90aaf5aa91e7e00e4d590b858400",
+      "modified_after_export": true
     },
     {
       "source": "yibu-youju/REUSE_MANIFEST.json",
@@ -1413,7 +1419,9 @@
       "destination": "baseline/backend/scripts/g0_runtime_probe.py",
       "source_sha256": "57daf5ee4500a99683f5c8475bbe9b26dc835fd054b14ac75b1d38efafd7f261",
       "normalized_for_publication": false,
-      "published_sha256": "57daf5ee4500a99683f5c8475bbe9b26dc835fd054b14ac75b1d38efafd7f261"
+      "published_sha256": "92b73ca5ed6768caa79210f8321a27a580f99abda3b6aff34e92995ec706ae15",
+      "exported_sha256": "57daf5ee4500a99683f5c8475bbe9b26dc835fd054b14ac75b1d38efafd7f261",
+      "modified_after_export": true
     },
     {
       "source": "yibu-youju/backend/scripts/g0_verify.py",
@@ -1434,7 +1442,9 @@
       "destination": "baseline/scripts/run-g0.ps1",
       "source_sha256": "58cf949e936a754ec316b029d1416eb0ab22c4670b234e6573634dce527ef0f5",
       "normalized_for_publication": true,
-      "published_sha256": "c50f40ed5eee940f868b5150d3924698d971adfe440ebe7cd78006809536f259"
+      "published_sha256": "702a3e23aa1b20136fa8944e51acc1b262a11295a3cba2a052a0c42627c5ff51",
+      "exported_sha256": "c50f40ed5eee940f868b5150d3924698d971adfe440ebe7cd78006809536f259",
+      "modified_after_export": true
     },
     {
       "source": "yibu-youju/.env.model.local.example",

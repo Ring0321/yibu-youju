@@ -1,0 +1,70 @@
+name: G0 database and workflow integration
+
+on:
+  push:
+    paths:
+      - baseline/**
+      - .github/workflows/g0.yml
+  pull_request:
+    paths:
+      - baseline/**
+      - .github/workflows/g0.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Initialize isolated random credentials
+        working-directory: baseline
+        shell: pwsh
+        run: ./scripts/initialize-g0.ps1
+      - name: Build the frozen frontend and backend
+        working-directory: baseline
+        shell: pwsh
+        run: ./scripts/run-g0.ps1 -Phase Build -ProjectName yibu-g0-ci
+      - name: Run migration and upstream regression tests
+        working-directory: baseline
+        shell: pwsh
+        run: |
+          ./scripts/run-g0.ps1 -Phase Database -ProjectName yibu-g0-ci
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./scripts/run-g0.ps1 -Phase Tests -ProjectName yibu-g0-ci
+      - name: Verify HTTP assets and persistence across database restart
+        working-directory: baseline
+        shell: pwsh
+        run: |
+          foreach ($phase in @('Write', 'RestartDatabase', 'Database', 'Read')) {
+            ./scripts/run-g0.ps1 -Phase $phase -ProjectName yibu-g0-ci
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+      - name: Verify durable checkpoints and actual queue workers
+        working-directory: baseline
+        shell: pwsh
+        run: ./scripts/run-g0.ps1 -Phase Workflow -ProjectName yibu-g0-ci
+      - name: Lint project verification code
+        working-directory: baseline
+        shell: pwsh
+        run: ./scripts/run-g0.ps1 -Phase Lint -ProjectName yibu-g0-ci
+      - name: Show sanitized machine-readable results
+        if: always()
+        working-directory: baseline
+        shell: pwsh
+        run: |
+          $files = @('upstream-report.json', 'runtime-write.json', 'runtime-read.json', 'workflow-report.json')
+          foreach ($file in $files) {
+            $path = Join-Path 'evidence/yibu-g0-ci' $file
+            if (Test-Path -LiteralPath $path) { Get-Content -LiteralPath $path }
+          }
+      - name: Stop this job's database without deleting volumes
+        if: always()
+        working-directory: baseline
+        run: docker compose --project-name yibu-g0-ci --env-file .env.g0 -f compose.g0.yml stop db

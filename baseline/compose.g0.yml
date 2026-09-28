@@ -29,11 +29,14 @@ services:
       SENTRY_DSN: ""
       SMTP_HOST: ""
       EMAILS_FROM_EMAIL: g0-noreply@example.com
+      YIBU_G0_PROBE: "1"
+      LANGSMITH_TRACING: "false"
+      LANGCHAIN_TRACING_V2: "false"
     depends_on:
       db:
         condition: service_healthy
     volumes:
-      - ./evidence/g0:/evidence
+      - ${G0_EVIDENCE_DIR:-./evidence/yibu-g0}:/evidence
     command: ["python", "/app/backend/scripts/g0_verify.py"]
 
 volumes:
