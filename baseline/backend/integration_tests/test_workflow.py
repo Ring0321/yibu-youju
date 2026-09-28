@@ -1,3 +1,4 @@
+import secrets
 import time
 from concurrent.futures import ThreadPoolExecutor
 from uuid import uuid4
@@ -6,7 +7,11 @@ import httpx
 import pytest
 from langgraph.checkpoint.postgres import PostgresSaver
 from langgraph.types import Command
+from sqlmodel import Session
 
+from app import crud
+from app.core.db import engine
+from app.models import UserCreate
 from g0.database import CHECKPOINT_SCHEMA, QUEUE_SCHEMA, connect, database_url
 from g0.migrate import migrate
 from g0.queue import STALLED_SECONDS, TASK_NAME, make_queue
@@ -189,6 +194,48 @@ def test_authentication_is_required(api):
             ).status_code
             == 401
         )
+
+
+def test_non_admin_cannot_use_g0_api(api):
+    email = f"g0-{uuid4().hex}@example.com"
+    password = secrets.token_urlsafe(24)
+    with Session(engine) as session:
+        crud.create_user(
+            session=session, user_create=UserCreate(email=email, password=password)
+        )
+    with httpx.Client(base_url=str(api.base_url), timeout=5) as ordinary:
+        response = ordinary.post(
+            "/api/v1/login/access-token", data={"username": email, "password": password}
+        )
+        assert response.status_code == 200
+        ordinary.headers["Authorization"] = "Bearer " + response.json()["access_token"]
+        assert ordinary.get(f"/g0/runs/{uuid4()}").status_code == 403
+        assert (
+            ordinary.post(
+                f"/g0/runs/{uuid4()}/start",
+                json={"command_id": str(uuid4()), "prompt": "non-admin fixture"},
+            ).status_code
+            == 403
+        )
+
+
+def test_concurrent_distinct_resumes_accept_only_one_input(api, worker):
+    run_id, _, _, _ = start(api)
+    worker()
+    bodies = [
+        {"command_id": str(uuid4()), "acknowledged": value} for value in (True, False)
+    ]
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        responses = list(
+            executor.map(
+                lambda body: api.post(f"/g0/runs/{run_id}/resume", json=body), bodies
+            )
+        )
+    assert sorted(response.status_code for response in responses) == [202, 409]
+    worker()
+    events = api.get(f"/g0/runs/{run_id}").json()["events"]
+    assert sum(event["kind"] == "input_received" for event in events) == 1
+    assert sum(event["kind"] == "probe_completed" for event in events) == 1
 
 
 def test_enqueue_rolls_back_with_business_write():

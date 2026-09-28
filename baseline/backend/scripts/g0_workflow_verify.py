@@ -29,6 +29,8 @@ def main() -> int:
             "pytest",
             "-q",
             "integration_tests",
+            "-o",
+            "junit_family=xunit1",
             f"--junitxml={run}/tests.xml",
         ],
     ]
@@ -48,6 +50,7 @@ def main() -> int:
         if code:
             break
     counts = {}
+    observations = []
     xml = run / "tests.xml"
     if xml.exists():
         clean = redact(xml.read_text(encoding="utf-8"))
@@ -59,11 +62,29 @@ def main() -> int:
             )
             for key in ("tests", "failures", "errors", "skipped")
         }
+        allowed = {
+            "waiting_seconds",
+            "worker_processes",
+            "saved_checkpoint",
+            "resumed_checkpoint",
+            "original_command",
+        }
+        observations = [
+            {
+                "test": case.attrib["name"],
+                "name": item.attrib["name"],
+                "value": item.attrib["value"],
+            }
+            for case in suites.iter("testcase")
+            for item in case.findall("properties/property")
+            if item.attrib.get("name") in allowed
+        ]
     report = {
         "kind": "isolated_infrastructure_integration",
         "passed": code == 0,
         "completed_at": datetime.now(UTC).isoformat(),
         "counts": counts,
+        "observations": observations,
         "versions": {
             name: version(name)
             for name in (
